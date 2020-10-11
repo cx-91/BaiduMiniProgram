@@ -1,0 +1,19 @@
+
+<view class="tagBall">
+  <view s-for="item, index in tagEle" s-key="{{index}}">
+    <a s-if="item.center" class="tag-center" style="opacity:{{item.o}};z-index:{{item.z}};left: {{item.x}}rpx;top: {{item.y}}rpx;transform: scale({{item.s}})">
+      {{item.title}}
+    </a>
+    <a s-else catchtap="selectWord" data-index="{{index}}" class='{{item.selected?"tag-hover":"tag"}}' style="opacity:{{item.o}};z-index:{{item.z}};left: {{item.x}}rpx;top: {{item.y}}rpx;transform: scale({{item.s}})">
+      {{item.title}}
+    </a>
+  </view>
+</view>
+<view class="query-container" s-if="isQuery">
+  <view class="query-wordinfo-container">
+      <text class="query-name-text">{{queryWordInfo.name}}</text>
+      <image bindtap="exitQuery" class="icon-close-m" src="../../images/icons/exit.png" />
+      <text class="query-soundmark-text">{{queryWordInfo.soundmark}}</text>
+  </view>
+  <text class="query-meaning-text">{{queryWordInfo.meaning}}</text>
+</view>

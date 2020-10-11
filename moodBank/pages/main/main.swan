@@ -1,0 +1,59 @@
+<!--miniprogram/pages/main/main.wxml-->
+
+<view class="wrap">
+    <view class="card-area">
+        <canvas
+            canvas-id="mycanvas"
+            disable-scroll="false"
+            bindtouchstart="touchstart"
+            bindtouchmove="touchmove"
+            bindtouchend="touchend"
+            bindtouchcancel="touchcancel"
+            bindlongtap="longtap"
+            binderror="error">
+        </canvas>
+        <view class="center-text">{{resultComment}}</view>
+    </view>
+
+    <!-- <view class="card-area">
+        <view class="top-description border-bottom">今天我的表情？</view>
+        <label class="block border-bottom">
+            <checkbox checked>哭</checkbox>
+        </label>
+        <label class="block border-bottom">
+            <checkbox>无表情</checkbox>
+        </label>
+        <label class="block border-bottom">
+            <checkbox>笑</checkbox>
+        </label> -->
+
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>多列选择器</view>
+            <view>mode="multiSelector"</view>
+        </view>
+        <view class="section date-section" hover-class="section-active">
+            <picker mode="multiSelector"
+                    bindchange="bindMultiPickerChange"
+                    bindcolumnchange="bindMultiPickerColumnChange"
+                    value="{{multiIndex}}"
+                    range="{{multiArray}}"
+                    title="多列选择器">
+                <view class="picker">
+                    <text class="chooseItem">今天的心情:</text>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+
+    <view class="card-area">
+        <view class="top-description border-bottom">给自己的留言</view>
+        <input class="normalInput" placeholder="请在此输入标题" />
+    </view>
+
+    <button>
+        提交
+    </button>
+</view>

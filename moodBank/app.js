@@ -12,7 +12,10 @@ App({
     }
 
     this.initTask();
-    this.globalData = {};
+    this.globalData = {
+        //mo ban li fu zhi de docWeb, ke yi bei ti huan
+        openParams: 'docWeb'
+    };
   },
   initTask: function () {
     var lastLoginDate; // if(lastLoginDate = wx.getStorageSync('lastLoginDate')){

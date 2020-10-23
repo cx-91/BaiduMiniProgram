@@ -15,7 +15,7 @@
             <image class="calendar-icon" src="../../images/icons/calendar.png" />
         </view>
     </view>
-    <view class="vocabulary-container" data-type="{{0}}" bindtap="toDictionary">
+    <!-- <view class="vocabulary-container" data-type="{{0}}" bindtap="toDictionary">
         <image class="vocabulary-background-image" src="../../images/backgrounds/nature.jpg" />
         <text class="vocabulary-name-text">{{bookInfo.name}}</text>
         <view class="vocabulary-guide">
@@ -32,8 +32,10 @@
                 <view class="vocabulary-progress-bar-mask" />
             </view>
         </view>
-    </view>
-    <view class="task-container" data-type="{{1}}" bindtap="toDictionary">
+    </view> -->
+
+    <!-- <view class="task-container" data-type="{{1}}" bindtap="toDictionary"> -->
+    <view class="task-container" data-type="{{1}}">
         <text class="task-guide-text">· 心情总览 ·</text>
         <view class="task-info">
             <view class="task-info-trisection">
@@ -42,14 +44,15 @@
             </view>
             <view class="task-info-trisection">
                 <text class="task-info-trisection-top-text">{{oldWordsNum}}</text>
-                <text class="task-info-trisection-bottom-text">历史心情</text>
+                <text class="task-info-trisection-bottom-text">坏心情</text>
             </view>
-            <!-- <view class="task-info-trisection">
+            <view class="task-info-trisection">
                 <text class="task-info-trisection-top-text">{{unstudyWordsNum}}</text>
                 <text class="task-info-trisection-bottom-text">历史心情</text>
-            </view> -->
+            </view>
         </view>
     </view>
+    <view class="start-button"  bindtap="toDictionary">取心情</view>
     <view s-if="!complete" class="start-button" bindtap="startMain">存心情</view>
     <view s-else class="start-button">已完成</view>
 </view>

@@ -14,10 +14,11 @@
             enable-back-to-top="true"
             bindscrolltoupper="upper"
             bindscrolltolower="lower"
-            bindscroll="scroll">
-            <view id="one" class="color-a">A</view>
-            <view id="two" class="color-b">B</view>
-            <view id="three" class="color-c">D</view>
+            bindscroll="scroll"
+            >
+            <view id="one" class="color-a" bindtap="handleItemTap" s-for="item,index in scrollList">A{{item.description}}</view>
+            <view id="two" class="color-b" bindtap="handleItemTap">B{{item.description}}</view>
+            <view id="three" class="color-c" bindtap="handleItemTap" >D{{item.description}}</view>
             <view id="three" class="color-a">E</view>
             <view id="three" class="color-c">F</view>
             <view id="three" class="color-a">G</view>
@@ -27,11 +28,11 @@
             <view id="three" class="color-a">K</view>
             <view id="three" class="color-c">L</view>
         </scroll-view>
-        <view class="page-section-btns">
+        <!-- <view class="page-section-btns">
             <view class="next-page" bindtap="tap">下一页</view>
             <view bindtap="tapMove">滚动</view>
             <view class="scroll-to-top" bindtap="scrollToTop">回顶部</view>
-        </view>
+        </view> -->
     </view>
     <!-- <view class="mode-title mode-title-first">
         <view class="mode-title-line-left"></view>

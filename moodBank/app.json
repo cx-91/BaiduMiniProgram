@@ -32,15 +32,15 @@
         "list": [
             {
                 "pagePath": "pages/home/home",
-                "text": "home"
+                "text": "记录心情"
             },
             {
                 "pagePath": "pages/status/status",
-                "text": "status"
+                "text": "情感解读"
             },
             {
                 "pagePath": "pages/userCenter/userCenter",
-                "text": "user"
+                "text": "用户"
             }
         ]
     },

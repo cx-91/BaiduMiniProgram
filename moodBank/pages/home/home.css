@@ -209,7 +209,7 @@
 .start-button{
     margin-top: 100rpx;
     background-image: linear-gradient(-20deg, #00cdac 0%, #8dda85 100%);
-    width: 65%;
+    width: 50%;
     color: white;
     text-align: center;
     height: 90rpx;

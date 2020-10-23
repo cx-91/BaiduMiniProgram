@@ -1,48 +1,97 @@
-<!--miniprogram/pages/dictionary/dictionary.wxml-->
-<view class="top-bar">
-    <view s-if="type == 0">
-        <view class="top-bar-element" bindtap="changeList" data-index="0">
-            <text class="top-bar-element-text">未学习</text>
-            <view s-if="tabIndex==0" class="top-bar-bottom" />
-        </view>
-        <view class="top-bar-element" bindtap="changeList" data-index="1">
-            <text class="top-bar-element-text">正在学</text>
-            <view s-if="tabIndex==1" class="top-bar-bottom" />
-        </view>
-        <view class="top-bar-element" bindtap="changeList" data-index="2">
-            <text class="top-bar-element-text">已掌握</text>
-            <view s-if="tabIndex==2" class="top-bar-bottom" />
-        </view>
-        <view class="top-bar-element" bindtap="changeList" data-index="3">
-            <text class="top-bar-element-text">简单词</text>
-            <view s-if="tabIndex==3" class="top-bar-bottom" />
+<!--miniprogram/pages/status/status.wxml-->
+<custom chineseName="可滚动视图区域" engName="scroll-view"></custom>
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description">纵向滚动</view>
+        <scroll-view
+            class="scroll-view"
+            scroll-y
+            upper-threshold="1"
+            lower-threshold="1"
+            scroll-top="{= scrollTop =}"
+            scroll-into-view="{= scrollIntoView =}"
+            scroll-with-animation="true"
+            enable-back-to-top="true"
+            bindscrolltoupper="upper"
+            bindscrolltolower="lower"
+            bindscroll="scroll">
+            <view id="one" class="color-a">A</view>
+            <view id="two" class="color-b">B</view>
+            <view id="three" class="color-c">D</view>
+            <view id="three" class="color-a">E</view>
+            <view id="three" class="color-c">F</view>
+            <view id="three" class="color-a">G</view>
+            <view id="three" class="color-c">H</view>
+            <view id="three" class="color-a">I</view>
+            <view id="three" class="color-c">J</view>
+            <view id="three" class="color-a">K</view>
+            <view id="three" class="color-c">L</view>
+        </scroll-view>
+        <view class="page-section-btns">
+            <view class="next-page" bindtap="tap">下一页</view>
+            <view bindtap="tapMove">滚动</view>
+            <view class="scroll-to-top" bindtap="scrollToTop">回顶部</view>
         </view>
     </view>
-    <view s-else>
-        <view class="top-bar-element" style="width:50%" bindtap="changeList" data-index="0">
-            <text class="top-bar-element-text">今日新词</text>
-            <view s-if="tabIndex==0" class="top-bar-bottom" />
+    <!-- <view class="mode-title mode-title-first">
+        <view class="mode-title-line-left"></view>
+        <view class="mode-title-text">业务示例</view>
+        <view class="mode-title-line-right"></view>
+    </view> -->
+    <!-- <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>隐藏纵向滚动条</view>
         </view>
-        <view class="top-bar-element" style="width:50%" bindtap="changeList" data-index="1">
-            <text class="top-bar-element-text">今日复习</text>
-            <view s-if="tabIndex==1" class="top-bar-bottom" />
-        </view>
-    </view>
-    <view class="summary-switch-container">
-        <text class="summary-switch-text">释义遮挡</text>
-        <switch checked="{{isMask}}" color="#7bed9f" style="height: 30px;" bindchange="maskSwitchChange" />
-    </view>
+        <scroll-view
+            class="hide-scroll scroll-view"
+            scroll-y>
+            <view id="one" class="color-a">A</view>
+            <view id="two" class="color-b">B</view>
+            <view id="three" class="color-c">C</view>
+        </scroll-view>
+    </view> -->
 </view>
 
-<view class="word" data-index="{{index}}" s-for="item, index in currentWordsList" s-key="{{item.word}}">
-    <view class="word-top" catchtap="viewWordInfo" data-index="{{index}}">
-        <text class="word-text">{{item.name}}</text>
-        <view class="word-icon-container" catchtap="pronounce" data-index="{{index}}">
-            <image class="word-icon" src="../../images/icons/sound.png" />
+
+
+
+
+
+
+
+<!-- <view class="top-container">
+    <text class="top-total-num-text">{{masterNum + studingNum + easyNum}}</text>
+    <text class="top-total-num-guide-text">单词总数</text>
+    <view class="top-trisection-container">
+        <view class="top-trisection">
+            <text class="top-trisection-top-text">{{masterNum}}</text>
+            <text class="top-trisection-bottom-text">已掌握</text>
+        </view>
+        <view class="top-trisection">
+            <text class="top-trisection-top-text">{{studingNum}}</text>
+            <text class="top-trisection-bottom-text">正在学</text>
+        </view>
+        <view class="top-trisection">
+            <text class="top-trisection-top-text">{{easyNum}}</text>
+            <text class="top-trisection-bottom-text">简单词</text>
         </view>
     </view>
-    <view catchtap="wordMask" data-index="{{index}}">
-        <view s-if="item.mask" class="word-mask" />
-        <view s-else class="word-meaning">{{item.meaning[0]}}</view>
-    </view>
 </view>
+<view class="separator" />
+<view class="canvas-container">
+    <view class="canvas-guide-container">
+        <view class="canvas-guide-left" style="border-color:#1dd1a1;">进步曲线</view>
+        <view class="canvas-guide-right" style="border-color:#7bed9f; opacity:0.4;">单词总数</view>
+        <view class="canvas-guide-right" style="border-color:#2ed573; opacity:0.4;">已掌握</view>
+    </view>
+    <canvas canvas-id="canvas1" />
+</view>
+<view class="separator" />
+<view class="canvas-container">
+    <view class="canvas-guide-container">
+        <view class="canvas-guide-left" style="border-color:#1dd1a1;">每日单词统计</view>
+        <view class="canvas-guide-right" style="border-color:#f3a683; opacity:0.4;">任务</view>
+        <view class="canvas-guide-right" style="border-color:#e15f41; opacity:0.4;">已学</view>
+    </view>
+    <canvas canvas-id="canvas2" />
+</view> -->

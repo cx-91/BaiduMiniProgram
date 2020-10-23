@@ -2,6 +2,7 @@
     "navigationBarTitleText": "scroll-View",
     "navigationStyle": "custom",
     "usingComponents": {
-         "custom": "../custom/custom"
+         "custom": "../custom/custom",
+         "statusDetails": "../../components/statusDetails/statusDetails"
     }
 }

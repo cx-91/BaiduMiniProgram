@@ -1,0 +1,20 @@
+<!-- 自定义组件内部的模板 (custom.swan) -->
+<view class="nav-box {{theme}}" style="min-height:{{statusBarHeight /100}}rem">
+    <view class="top-title" style="margin-top:{{statusBarHeight /100}}rem">
+        <view s-if="{{ifdocsWeb}}" class="back-icon-wrap">
+            <view s-if="{{shareAppIevel3}}">
+                <image s-if="{{ifdocs}}" bindtap="backIndex" class="back-icon" src="{{(theme !== 'dark' && theme !=='transparent') ? 'https://b.bdstatic.com/searchbox/icms/searchbox/img/back.png' : 'https://b.bdstatic.com/searchbox/icms/searchbox/img/back_white.png'}}"></image>
+                <image s-else data-navigate="{{customNavigate}}" bindtap="backIndex" class="back-icon" src="https://b.bdstatic.com/miniapp/images/swan-demo-index.png"></image>
+            </view>
+            <view s-else>
+                <image bindtap="backIevel3" class="back-icon" src="{{theme !== 'dark' ? 'https://b.bdstatic.com/searchbox/icms/searchbox/img/back.png' : 'https://b.bdstatic.com/searchbox/icms/searchbox/img/back_white.png'}}"></image>
+                <image data-navigate="{{customNavigate}}" bindtap="backIndex" class="back-icon" src="https://b.bdstatic.com/miniapp/images/swan-demo-index.png"></image>
+            </view>
+        </view>
+        <view class="title">
+            <view class="page-title-china">{{chineseName}}</view>
+            <view class="page-title-english">{{engName}}</view>
+        </view>
+    </view>
+</view>
+<view style="padding-top:{{statusBarHeight /100 + 0.53}}rem"></view>

@@ -1,115 +1,176 @@
-/* miniprogram/pages/dictionary/dictionary.wxss */
-.top-bar{
-    margin: auto;
-    margin-top: 20rpx;
-    width: 100%;
-    overflow: hidden;
-    border-bottom: solid;
-    border-width: 10rpx;
-    border-color: rgb(243, 243, 243);
-    padding-bottom: 20rpx;
+/* miniprogram/pages/status/status.wxss */
+
+.scroll-view {
+    height: 4.8rem;
+    white-space: nowrap;
 }
 
-.top-bar-element{
+.color-a,
+.color-b,
+.color-c {
+    line-height: 1.66rem;
+    text-align: center;
+    font-size: .16rem;
+    color: #fff;
+}
+
+.color-a {
+    background-color: #5B9FFF;
+}
+.color-b {
+    background-color: #85B8FF;
+}
+.color-c {
+    background-color: #ADCFFF;
+}
+
+.row-view {
+    display: inline-block !important;
+    width: 100%;
+    height: 1.66rem;
+    line-height: 1.66rem;
+}
+
+.page-section-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 .23rem;
+}
+
+.page-section-btns > view {
+    flex: 1;
+    height: .28rem;
+    width: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #6895FF;
+    border: .007rem solid #38F;
+    border-radius: .05rem;
+    margin: .1rem .14rem;
+}
+
+.scroll-to-top {
+    border-right: 1px solid #ddd;
+}
+
+.next-page {
+    border-left: 1px solid #ddd;
+}
+
+
+.horizontal-rolling {
+    height: 2.5rem;
+}
+
+.arrange {
+    display: flex;
+}
+
+.scroll-item {
+    padding: .17rem .17rem;
+    height: 2.5rem;
+}
+
+.scroll-image {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: .15rem;
+}
+
+/*
+
+ .separator{
+    width: 100%;
+    height: 8rpx;
+    background: #f0f0f0;
+}
+
+.top-container{
+    overflow: hidden;
+    margin-top: 50rpx;
+    padding-bottom: 40rpx;
+    width: 100%;
+}
+
+.top-total-num-text{
+    display: block;
+    text-align: center;
+    color: rgb(38, 206, 184);
+    font-size: 60rpx;
+    font-weight: bolder;
+}
+
+.top-total-num-guide-text{
+    display: block;
+    text-align: center;
+    color: #acacac;
+    font-size: 30rpx;
+}
+
+.top-trisection-container{
+    margin-top: 50rpx;
+}
+
+.top-trisection{
+    overflow: hidden;
+    width: 33.3%;
     float: left;
-    width: 25%;
     text-align: center;
 }
 
-.top-bar-element-text{
+.top-trisection-top-text{
+    color: #4b4b4b;
+    font-size: 40rpx;
     font-weight: bold;
-    font-size: 28rpx;
-    color: rgb(105, 105, 105);
+    display: block;
 }
 
-.top-bar-bottom{
-    width: 25%;
-    margin: auto;
-    background: #2cc786;
-    height: 8rpx;
-    border-radius: 4rpx;
-    margin-top: 10rpx;
-}
-
-.summary-switch-container{
-    float: right;
-    margin-top: 10rpx;
-    margin-right: 55rpx;
-}
-
-.summary-switch-text{
+.top-trisection-bottom-text{
+    display: block;
+    color: #acacac;
     font-size: 25rpx;
-    color: #bbbbbb;
-    margin-right: 15rpx;
+    margin-top: 5rpx;
 }
 
-.wx-switch-input{
-    width:60rpx !important;
-    height:36rpx !important;
-}
-/*白色样式（false的样式）*/
-.wx-switch-input::before{
-    width:60rpx !important;
-    height: 36rpx !important;
-}
-/*绿色样式（true的样式）*/
-.wx-switch-input::after{
-    width: 32rpx !important;
-    height: 32rpx !important;
-}
-/* words */
+.canvas-container{
 
-.word{
+}
+
+.canvas-guide-container{
+    overflow: hidden;
     width: 90%;
     margin: auto;
-    margin-top: 20rpx;
-    border-bottom: solid;
-    border-width: 5rpx;
-    border-color: #f0f0f0;
+    margin-top: 30rpx;
 }
 
-.word-top{
-    overflow: hidden;
-}
-
-.word-text{
-    font-weight: bold;
+.canvas-guide-left{
+    padding-left: 10rpx;
     float: left;
-    /* background: rebeccapurple; */
-    height: 60rpx;
-    line-height: 60rpx;
+    border-left: solid;
+    font-size: 30rpx;
+    color: #acacac;
 }
 
-.word-icon-container{
-    width: 60rpx;
-    height: 60rpx;
+.canvas-guide-right{
+    padding-right: 10rpx;
+    margin-left: 20rpx;
     float: right;
+    border-right: solid;
+    border-color: rgb(168, 223, 168);
+    border-width: 40rpx;
+    font-size: 30rpx;
+     color: #acacac;
 }
 
-.word-icon{
-    height: 70%;
-    width: 80%;
-    margin-top: 15%;
-    margin-left: 10%;
+canvas{
+    width: 90%;
+    margin: auto;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    height: 400rpx;
+     background: rgb(255, 224, 224);
 }
 
-.word-mask{
-    border: solid;
-    border-radius: 10rpx;
-    border-width: 1rpx;
-    border-color: #eeeeee;
-    background: #fafafa;
-    height: 50rpx;
-    width: 99%;
-    display: block;
-    margin-top: 10rpx;
-    margin-bottom: 20rpx;
-}
-
-.word-meaning{
-    margin-top: 10rpx;
-    font-size: 32rpx;
-    color: #959595;
-    letter-spacing: 0.05rem;
-    margin-bottom: 20rpx;
-}
+*/

@@ -112,7 +112,7 @@ Page({ // eslint-disable-line
 
 
         swan.navigateTo({
-            url: '../article/article?id=' + idx
+            url: '../article/article?idx=' + idx
           });
     }
 });

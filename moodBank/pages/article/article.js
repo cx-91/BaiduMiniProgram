@@ -6,7 +6,7 @@ import {debounce, showToast, checkIsiPhoneX} from '../../utils/article_utils';
 import {articleInfo, followInfo} from '../../utils/article_mock';
 
 
-var inputId;
+var idx;
 /* globals Page, swan, getCurrentPages */
 /* eslint-disable */
 Page({
@@ -49,8 +49,8 @@ Page({
     },
     onLoad(options) {
         console.log(options);
-        inputId = options.id;
-        console.log("input: ", inputId);
+        idx = options.idx;
+        console.log("input: ", idx);
 
         swan.request.mock = function (param) {
             console.log("on success");
@@ -85,10 +85,10 @@ Page({
 
         console.log("reach 20: ",JSON.stringify(options.articleId));
         //console.log("reach 21: ",JSON.parse(options.articleId));
-        console.log("reach 22: ",JSON.stringify(options.id));
-        console.log("reach 23: ",JSON.parse(options.id));
+        console.log("reach 22: ",JSON.stringify(options.idx));
+        console.log("reach 23: ",JSON.parse(options.idx));
 
-        this.getArticleDetail(undefined, () => {
+        this.getArticleDetail(options.articleId, () => {
             console.log("getArticleDetail");
             let userId = swan.getStorageSync('@content-detail:userId');
 
@@ -144,7 +144,7 @@ Page({
             success: res => {
                 if (res.errno === 0) {
                     this.setData({
-                        ...res.data[inputId]
+                        ...res.data[idx]
                     }, () => {
                         this.setData({
                             loading: false,

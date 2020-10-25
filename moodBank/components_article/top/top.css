@@ -1,0 +1,25 @@
+/**
+ * @file top.css
+ * @author swan
+ */
+.top-container {
+    width: 79.71rpx;
+    height: 79.71rpx;
+    position: fixed;
+    bottom: 30.8rpx;
+    right: 30.8rpx;
+    border-radius: 50%;
+    border: .6rpx solid rgba(0, 0, 0, .2);
+    background-color: #fff;
+    background-image: url(../../images/top.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.top-container-ipx {
+    bottom: 63.93rpx;
+}
+.quote-mask {
+    width: 50%;
+    transform: translate(50%, 50%);
+}

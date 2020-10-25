@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "guide-item": "./components/guide-item/guide-item"
+    }
+}

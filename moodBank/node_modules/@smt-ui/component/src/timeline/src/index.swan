@@ -1,0 +1,23 @@
+<view class="timeline timeline-class">
+    <view class="timeline-item {{timeHasTail ? '' : 'item-notail'}}">
+        <view class="item-tail item-tail-class"></view>
+        <view class="item-head">
+            <view class="item-head-icon item-head-{{timeStatus}}">
+                <smt-icon
+                    name="{{timeIcon}}"
+                    size="36.232rpx"
+                    color="{{timeIconColor}}">
+                </smt-icon>
+            </view>
+        </view>
+        <view class="item-content content-class">
+            <view class="item-content-desc item-content-desc-{{timeStatus}}" style="{{descStyle}}">
+                <rich-text class="desc-class" nodes="{{desc}}"></rich-text>
+            </view>
+            <view class="item-content-slot content-slot-class">
+                <slot></slot>
+            </view>
+            <view class="item-content-title content-title-class">{{title}}</view>
+        </view>
+    </view>
+</view>

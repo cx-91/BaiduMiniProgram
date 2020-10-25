@@ -1,0 +1,34 @@
+<view class="smt-refresh-wrap smt-refresh-container {{theme === 'dark' ? 'dark' : ''}}" style="height: {{loadingHeight}}px">
+    <slot name="loading">
+        <view class="circle left smt-refresh-circle-left {{status === 1 ? 'animate' : ''}}"
+            style="
+                height: {{circle.size}}px;
+                width: {{circle.size}}px;
+                margin-left: {{-circle.size / 2}}px;
+                margin-top: {{-circle.size / 2}}px;
+                opacity: {{status === 2 ? '0 !important' : circle.opacityL}};
+                transform: translate3d({{circle.xL}}px, 0, 0);
+            "
+        ></view>
+        <view class="circle right smt-refresh-circle-right {{status === 1 ? 'animate' : ''}}"
+            style="
+                height: {{circle.size}}px;
+                width: {{circle.size}}px;
+                margin-left: {{-circle.size / 2}}px;
+                margin-top: {{-circle.size / 2}}px;
+                opacity: {{status === 2 ? '0 !important' : circle.opacityR}};
+                transform: translate3d({{-circle.xR}}px, 0, 0);
+            "
+        ></view>
+    </slot>
+    <view class="result smt-refresh-result-container {{status === 2 ? 'show' : ''}}">
+        <slot name="result-icon">
+            <image
+                class="result-icon"
+                mode="aspectFit"
+                src="{{theme === 'dark' ? '../imgs/result-light.png' : '../imgs/result-dark.png'}}"
+            />
+        </slot>
+        <text class="result-text smt-refresh-result-text">{{clipedText}}</text>
+    </view>
+</view>

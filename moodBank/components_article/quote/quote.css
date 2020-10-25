@@ -1,0 +1,28 @@
+/**
+ * @file quote.css
+ * @author swan
+ */
+.quote-container {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    padding: 20.83rpx 21.74rpx;
+    border-radius: 5.43rpx;
+}
+.quote-mask {
+    width: 120rpx;
+    font-size: 39.86rpx;
+    margin-right: 14.49rpx;
+    margin-top: 9.96rpx;
+    transform: scale(1.3);
+}
+.quote-mask div {
+    margin: 0;
+    padding: 0;
+}
+.quote-content {
+    font-size: 32.61rpx;
+    letter-spacing: 2.72rpx;
+    line-height: 52.54rpx;
+    color: #666;
+}

@@ -1,0 +1,12 @@
+{
+    "name": "smart-ui",
+    "publicComponents": {
+        "smt-feed": "feed/src/index",
+        "smt-feed-item": "feed-item/src/index",
+        "smt-icon": "icon/src/index",
+        "smt-page-status": "page-status/src/index",
+        "smt-refresh": "refresh/src/index",
+        "smt-spin": "spin/src/index",
+        "smt-mask": "mask/src/index"
+    }
+}

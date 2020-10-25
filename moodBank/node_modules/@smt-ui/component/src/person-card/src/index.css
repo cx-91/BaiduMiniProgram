@@ -1,0 +1,53 @@
+.person-card {
+    background-image: linear-gradient(to right, #5f83c3, #9ab3de);
+    border-radius: 18.116rpx;
+    color: var(--white, #fff);
+    width: 688.406rpx;
+    margin: 0 auto;
+    min-height: 277.778rpx;
+    padding: 36.232rpx 30.193rpx 36.232rpx 36.232rpx;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.person-card .info-name {
+    font-size: var(--font-size-lg, 39.855rpx);
+    line-height: 39.855rpx;
+    font-weight: 700;
+    margin-bottom: 99.034rpx;
+}
+
+.person-card .info-item {
+    display: flex;
+    align-items: top;
+    line-height: 39.855;
+    font-size: var(--font-size-sm, 28.986rpx);
+    margin-top: 8px;
+}
+
+.person-card-big {
+    min-height: 383.454rpx;
+}
+
+.info-wrap {
+    margin: -9.058rpx 0 -5.435rpx;
+}
+
+.info-wrap .info-title {
+    max-width: 175.121rpx;
+    margin-right: 36.232rpx;
+    line-height: 1.39;
+    color: rgba(255, 255, 255, .65);
+    margin-top: 2.415rpx;
+}
+
+.info-wrap .info-desc {
+    flex: 1;
+    flex-shrink: 1;
+    line-height: 1.39;
+    margin-top: 2.415rpx;
+}

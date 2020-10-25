@@ -1,0 +1,87 @@
+.picture-container {
+    background-color: #fff;
+    padding: 28.96rpx 0 36.2rpx;
+}
+.tips-area {
+    margin: 0 30.8rpx;
+}
+
+.picture-area {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 30.77rpx;
+}
+
+.tips-area {
+    margin-top: 36.20rpx;
+    display: flex;
+}
+
+.tips-area text {
+    font-size: 28.96rpx;
+    color: #ccc;
+}
+
+.picture-item {
+    position: relative;
+    width: 221.01rpx;
+    height: 221.01rpx;
+    overflow: hidden;
+    margin-top: 8.45rpx;
+    margin-right: 7.25rpx;
+    border-radius: 9.05rpx;
+}
+
+.picture-item .close {
+    position: absolute;
+    top: 1px;
+    right: .5px;
+    z-index: 2;
+    height: 34.39rpx;
+    width: 34.39rpx;
+    background: url(../images/image-delete.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.picture-item image {
+    border-radius: 9.05rpx;
+    border: 1px solid rgba(0, 0, 0, .06);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.picture-item .tips {
+    position: absolute;
+    right: 9.05rpx;
+    bottom: 7.84rpx;
+    z-index: 2;
+    width: 71.8rpx;
+    height: 36.2rpx;
+    line-height: 36.2rpx;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .35);
+    border-radius: 18.1rpx;
+    color: #fff;
+    font-size: 21.72rpx;
+}
+
+.add-picture {
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 9.05rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-icon {
+    width: 76.09rpx;
+    height: 76.09rpx;
+    background: url(../images/image-add.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.large-container .picture-item {
+    width: 688.41rpx;
+    height: 458.94rpx;
+}
+

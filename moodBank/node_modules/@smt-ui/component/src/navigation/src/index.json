@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "smt-icon": "../../icon/src/index",
+        "navigation":"../components/index"
+    }
+}

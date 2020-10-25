@@ -1,0 +1,7 @@
+<view class="guide-item-container">
+    <view class="index-container">
+        <image class="index-image" src="../../../assets/number{{index}}.png"></image>
+        <view class="separate-line" style="{{isLast ? 'margin-bottom: 42.27rpx;' : ''}}"></view>
+    </view>
+    <slot></slot>
+</view>

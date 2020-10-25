@@ -1,0 +1,42 @@
+<navigation s-if="type === 'default'"
+    navigation-style="{{navigationStyle}}"
+    navigation-area-style="{{navigationAreaStyle}}"
+    back-icon="{{backIcon}}"
+    home-icon="{{homeIcon}}"
+    background-color="{{backgroundColor}}"
+    front-color="{{frontColor}}"
+    opacity="{{opacity}}"
+    home-icon-size="{{homeIconSize}}"
+    back-icon-size="{{backIconSize}}"
+    is-full-screen-width="{{isFullScreenWidth}}">
+    <slot></slot>
+</navigation>
+<view s-else-if="type === 'switchNav'"
+    class="container switch-nav-container">
+    <navigation s-if="hideFixed"
+        navigation-style="{{commonBar.navigationStyle}}"
+        navigation-area-style="{{commonBar.navigationAreaStyle}}"
+        home-icon="{{commonBar.homeIcon}}"
+        back-icon="{{commonBar.backIcon}}"
+        background-color="{{commonBar.bgColor}}"
+        opacity="{{commonBar.opacity}}"
+        front-color="{{commonBar.frontColor}}"
+        is-full-screen-width="{{commonBar.isFullScreenWidth}}"
+        home-icon-size="{{homeIconSize}}"
+        back-icon-size="{{backIconSize}}">
+        <view class="title">{{commonBar.title}}</view>
+    </navigation>
+    <navigation s-else
+        navigation-style="{{fixedBar.navigationStyle}}"
+        navigation-area-style="{{fixedBar.navigationAreaStyle}}"
+        background-color="{{fixedBar.bgColor}}"
+        home-icon="{{fixedBar.homeIcon}}"
+        back-icon="{{fixedBar.backIcon}}"
+        opacity="{{fixedBar.opacity}}"
+        front-color="{{fixedBar.frontColor}}"
+        is-full-screen-width="{{fixedBar.isFullScreenWidth}}"
+        home-icon-size="{{homeIconSize}}"
+        back-icon-size="{{backIconSize}}">
+        <view class="title">{{fixedBar.title}}</view>
+    </navigation>
+</view>

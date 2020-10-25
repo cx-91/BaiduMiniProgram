@@ -1,0 +1,32 @@
+.notice-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--orange-light-1, #fff6f0);
+    color: var(--orange-1, #fa6400);
+    font-size: 30.609rpx;
+    padding: calc(36.232rpx - 1.861rpx) 30.797rpx;
+    line-height: 1.2;
+}
+
+.no-padding {
+    padding: calc(36.232rpx - 1.861rpx) 30.797rpx;
+    padding-right: 0;
+}
+
+.notice-bar .text-container {
+    display: flex;
+    flex: auto;
+    overflow-x: hidden;
+}
+
+.notice-bar .text {
+    flex: none;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.notice-bar .close-icon {
+    display: flex;
+    flex: none;
+    margin-left: 18.116rpx;
+}

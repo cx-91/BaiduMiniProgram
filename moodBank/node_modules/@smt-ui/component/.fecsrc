@@ -1,0 +1,23 @@
+{
+    "eslint": {
+        "env": {
+            "es6": true
+        },
+        "globals": {
+            "swan": true,
+            "Component": true,
+            "Page": true,
+            "App": true,
+            "getApp": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 6
+        },
+        "rules": {
+            "fecs-prefer-spread-element": -1,
+            "babel/new-cap": -1,
+            "no-console": -1,
+            "fecs-no-require": -1
+        }
+    }
+}

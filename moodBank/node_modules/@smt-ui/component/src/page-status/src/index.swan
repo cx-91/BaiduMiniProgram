@@ -1,0 +1,14 @@
+<view class="page-status smt-page-status-wrap {{theme}}">
+    <view s-if="{{loading}}" class="content">
+        <view class="loading-icon"></view>
+        <view s-if="loadingTitle" class="loading-title smt-page-status-loading-title">{{clipLoadingTitle}}</view>
+    </view>
+    <view s-else class="content">
+        <slot name="icon">
+            <view s-if="icon" class="iconfont icon-{{icon}} smt-page-status-icon"></view>
+        </slot>
+        <view class="title smt-page-status-title">{{clipTitle}}</view>
+        <view s-if="desc" class="description smt-page-status-description">{{clipDesc}}</view>
+        <view s-if="showBtn" class="btn smt-page-status-btn" bindtap="onTap">{{clipBtnText)}}</view>
+    </view>
+</view>

@@ -1,0 +1,104 @@
+.smt-refresh-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.smt-refresh-wrap .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -6.341rpx;
+    margin-top: -6.341rpx;
+    height: 12.681rpx;
+    width: 12.681rpx;
+    border-radius: 50%;
+    transition: opacity 30ms linear;
+}
+
+.smt-refresh-wrap .result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50.725rpx;
+    font-size: 23.551rpx;
+    color: var(--black, #000);
+    background-color: var(--gray-8, #f8f8f8);
+    border-radius: 60.386rpx;
+    padding: 0 28.986rpx;
+    box-sizing: border-box;
+    transform: translate3d(0, 88.164rpx, 0);
+    opacity: 0;
+    transition: transform 80ms linear, opacity 40ms linear;
+}
+
+.smt-refresh-wrap .result.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.smt-refresh-wrap .result-icon {
+    width: 23.551rpx;
+    height: 23.551rpx;
+    flex: none;
+}
+
+.smt-refresh-wrap .result-text {
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    margin-left: 12.681rpx;
+    white-space: nowrap;
+    max-width: 425.725rpx;
+    overflow: hidden;
+    font-weight: 400;
+    color: #000;
+    text-align: justify;
+}
+
+.smt-refresh-wrap .circle.animate {
+    animation: refreshCircle 500ms infinite ease-in-out alternate;
+    opacity: 1 !important; /* csshint-disable disallow-important */
+}
+
+@keyframes refreshCircle {
+    from {
+        transform: translate3d(-19.928rpx, 0, 0);
+    }
+    to {
+        transform: translate3d(19.928rpx, 0, 0);
+    }
+}
+
+.smt-refresh-wrap .circle.left {
+    background-color: var(--circle-left-bg, #b2b2b2);
+}
+
+.smt-refresh-wrap .circle.right {
+    background-color: var(--circle-right-bg, #d4d4d4);
+    animation-direction: alternate-reverse;
+}
+
+/* 深色主题 */
+
+.smt-refresh-wrap.dark {
+    background-color: var(--dark-refresh-bg, #4985da);
+}
+
+.smt-refresh-wrap.dark .circle.left {
+    background-color: #fff;
+}
+
+.smt-refresh-wrap.dark .circle.right {
+    background-color: var(--dark-circle-left-bg, rgba(255, 255, 255, .6));
+}
+
+.smt-refresh-wrap.dark .result {
+    background-color: var(--dark-circle-right-bg, rgba(255, 255, 255, .1));
+}
+
+.smt-refresh-wrap.dark .result-text {
+    color: #fff;
+}

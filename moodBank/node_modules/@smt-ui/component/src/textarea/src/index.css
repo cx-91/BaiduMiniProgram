@@ -1,0 +1,73 @@
+.container {
+    background: #fff;
+    position: relative;
+}
+.content-area {
+    padding: 27.78rpx 30.8rpx;
+}
+
+.content-area textarea {
+    width: 100%;
+    color: #000;
+}
+
+.fixed-height {
+    height: 147.34rpx;
+}
+
+.auto-height {
+    min-height: 147.34rpx;
+    max-height: 339.37rpx;
+}
+
+.input-area {
+    background-color: #fff;
+    font-size: 32.61rpx;
+    line-height: 53.09rpx;
+}
+
+.textarea-submit {
+    width: 76.09rpx;
+    height: 57.97rpx;
+    line-height: 57.97rpx !important;
+    font-size: 23.55rpx !important;
+    padding: 0;
+    position: absolute;
+    right: 1.12rpx;
+    bottom: 0;
+} 
+
+.content-area .tips-area {
+    color: #f44e4e;
+    font-size: 25.36rpx;
+    text-align: right;
+    height: 25.36rpx;
+    margin-top: 30.8rpx;
+}
+
+.content-area .remain-tips {
+    color: #999;
+}
+
+.border-content-area {
+    padding: 38.65rpx 30.8rpx;
+}
+
+.border-content-area .content-area {
+    border: .33px #666 solid;
+    border-radius: 9.06rpx;
+}
+
+.dark-content-area,
+.dark-content-area textarea {
+    color: #fff;
+    background: #1d69c6;
+}
+
+.dark-content-area .tips-area {
+    color: #fff;
+}
+
+.dark-content-area .remain-tips {
+    color: rgba(255, 255, 255, .6);
+}

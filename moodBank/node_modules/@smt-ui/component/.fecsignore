@@ -1,0 +1,13 @@
+node_modules/**/*
+dep/**/*
+test/**/*
+mock/**/*
+example/**/*
+output/**/*
+dist/**/*
+wx_dist/**/*
+ant_dist/**/*
+quick_dist/**/*
+tt_dist/**/*
+mochawesome-report/**/*
+**/lib/**/*.js

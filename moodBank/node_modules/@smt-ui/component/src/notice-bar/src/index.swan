@@ -1,0 +1,28 @@
+<view
+    s-if="show"
+    class="notice-bar notice-bar-class {{icon ? '' : 'no-padding'}}"
+    style="
+        {{bgColor ? 'background-color: ' + bgColor + ';' : ''}}
+    "
+>
+    <slot>
+        <slot name="left-icon"></slot>
+        <view class="text-container">
+            <slot name="text">
+                <text
+                    class="text text-class"
+                    bind:transitionend="aniEndHdl"
+                    style="
+                        {{textColor ? 'color: ' + textColor + ';' : ''}}
+                        padding-left: {{infinite ? containerWidth + 'px' : ''}};
+                    "
+                    animation="{{animationData}}"
+                >{{text}}</text>
+            </slot>
+        </view>
+        <slot name="right-icon">
+            <smt-icon s-if="{{icon}}" class="close-icon" size="36.232rpx" name="{{iconName}}" color="{{iconColor}}" bind:tap="closeHdl">
+            </smt-icon>
+        </slot>
+    </slot>
+</view>

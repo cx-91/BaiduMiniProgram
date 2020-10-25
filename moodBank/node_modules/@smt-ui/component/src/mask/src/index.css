@@ -1,0 +1,122 @@
+/**
+ * @file index.css
+ * @author swan
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    background-color: #fff;
+    font-size: 100px;
+    font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+input {
+    font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+swan-wrapper {
+    height: 100%;
+}
+
+swan-button {
+    margin: 0 .2rem;
+}
+
+.container {
+    font-size: .16rem;
+}
+
+.mask-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+.guide-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 77.29rpx 57.37rpx;
+    background: rgba(0, 0, 0, .65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.guide-item {
+    align-self: flex-start;
+}
+.detail-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: top;
+    position: relative;
+}
+.guide-detail {
+    color: #fff;
+    font-size: 27.78rpx;
+    line-height: 42.27rpx;
+    margin: 4.23rpx 0 28.99rpx 0;
+    max-width: 513.89rpx;
+}
+.detail-container image {
+    margin-bottom: 42.27rpx;
+}
+.guide-arrow {
+    position: fixed;
+    width: 146.14rpx;
+    height: 92.39rpx;
+    right: 155.8rpx;
+    top: 12.08rpx;
+}
+.guide-one {
+    width: 158.21rpx;
+    height: 58.57rpx;
+    margin-left: 12.68rpx;
+}
+.guide-two {
+    width: 513.89rpx;
+    height: 146.74rpx;
+}
+.guide-three {
+    width: 519.93rpx;
+    height: 371.98rpx;
+}
+.close-btn {
+    width: 199.28rpx;
+    height: 69.44rpx;
+    border: 1.81rpx solid #fff;
+    font-size: 28.99rpx;
+    line-height: 1;
+    padding: 20.53rpx 0;
+    color: #fff;
+    border-radius: 34.42rpx;
+    background-color: transparent;
+    margin-top: 30.19rpx;
+}
+.close-btn:after {
+    border: none;
+}
+.guide-mininapp {
+    position: absolute;
+    left: 36.23rpx;
+    top: 234.3rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.guide-mininapp .miniapp-icon {
+    width: 74.88rpx;
+    height: 74.88rpx;
+    background-color: #EEF1F4;
+    border-radius: 50%;
+    background-image: url(../assets/placeholder.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.guide-mininapp .miniapp-name {
+    font-size: 18.72rpx;
+    line-height: 1;
+    color: #333;
+    margin-top: 8.45rpx;
+}

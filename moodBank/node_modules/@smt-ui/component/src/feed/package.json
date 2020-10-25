@@ -1,0 +1,15 @@
+{
+  "name": "smt-feed",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "sh ./prebuild.sh",
+    "build": "echo \"smt-feed build\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 90ms linear;
+}
+
+.icon.show {
+    opacity: 1;
+}

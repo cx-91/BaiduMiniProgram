@@ -1,0 +1,179 @@
+/* 默认模式：左文右图 */
+.feed-item-area {
+    background: #fff;
+}
+.feed-item-container {
+    display: flex;
+    align-items: center;
+    padding: 24.76rpx 0 24.76rpx 0;
+    margin: 0 30.8rpx;
+    border-bottom: .6rpx solid #eee;
+    justify-content: space-between;
+}
+.active {
+    background: #f2f2f2;
+}
+.visited {
+    color: #999;
+}
+.feed-word-container {
+    width: calc(100% - 241.55rpx);
+    height: 156.4rpx;
+    position: relative;
+}
+.feed-word-container .title {
+    font-size: 34.42rpx;
+    line-height: 47.1rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.feed-word-container .details {
+    font-size: 21.74rpx;
+    color: #999;
+    position: absolute;
+    bottom: 0;
+}
+.feed-word-container .details view {
+    display: inline-block;
+}
+.feed-word-container .info-source {
+    margin-right: 15.1rpx;
+}
+.feed-image-container {
+    position: relative;
+    width: 224.64rpx;
+    height: 150.36rpx;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 9.06rpx;
+    background: url(../assets/empty.png) center no-repeat ;
+    background-size: contain;
+    overflow: hidden;
+}
+.feed-image-container image {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+ }
+.feed-image-container.loaded {
+    background: none;
+}
+.feed-image-container.loaded image {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+       -moz-transition: opacity .2s;
+         -o-transition: opacity .2s;
+            transition: opacity .2s;
+}
+.video-info {
+    width: 102.66rpx;
+    height: 36.23rpx;
+    line-height: 36.23rpx;
+    display: flex;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    border-radius: 18.12rpx;
+    font-size: 18.12rpx;
+    position: absolute;
+    right: 9.06rpx;
+    bottom: 9.06rpx;
+}
+.video-time {
+    width: 82.73rpx;
+    height: 36.23rpx;
+    line-height: 36.23rpx;
+    font-size: 18.12rpx;
+    border-radius: 18.12rpx;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 9.18rpx;
+    right: 9.06rpx;
+}
+.triAngle {
+    width: 0;
+    height: 0;
+    line-height: 36.23rpx;
+    border-top: 9.06rpx solid transparent;
+    border-right: 9.06rpx solid transparent;
+    border-bottom: 9.06rpx solid transparent;
+    border-left: 16.3rpx solid #fff;
+    margin: 9.66rpx 3.62rpx auto 16.3rpx;
+}
+/* 默认模式：无图 */
+.only-text {
+    height: auto;
+}
+.only-text .title {
+    margin-bottom: 21.74rpx;
+}
+.only-text .feed-image-container {
+    display: none;
+}
+.only-text .feed-word-container {
+    width: calc(100% - 30.19rpx);
+}
+
+/* 单图&大图模式 */
+.large-image-container {
+    display: block;
+}
+.large-image-container .title,
+.multiple-images-container .title {
+    margin-bottom: 14.49rpx;
+}
+.large-image-container .feed-image-container {
+    width: 100%;
+    height: 385.87rpx;
+    margin-bottom: 16.3rpx;
+}
+.large-image-container .video-info {
+    width: 86.96rpx;
+    height: 86.96rpx;
+    border-radius: 50%;
+    right: auto;
+    left: 50%;
+    top: 50%;
+    margin-left: -43.48rpx;
+    margin-top: -43.48rpx;
+}
+.large-image-container .triAngle {
+    border-top: 15.7rpx solid transparent;
+    border-right: 15.7rpx solid transparent;
+    border-bottom: 15.7rpx solid transparent;
+    border-left: 28.99rpx solid #fff;
+    margin: 27.17rpx 0 0 34.42rpx;
+}
+/* 多图模式 */
+
+.multiple-images-container .feed-word-container,
+.large-image-container .feed-word-container {   
+    width: 100%;
+    height: auto;
+}
+.multiple-images-container .details,
+.large-image-container .details {   
+    position: unset;
+}
+.multiple-images-container .feed-image-container {
+    border-radius: 0;
+}
+.images-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16.3rpx;
+    border-radius: 12.08rpx;
+    overflow: hidden;
+}
+.multiple-images-container .feed-image-container {   
+    margin-right: 7.25rpx;
+    height: 149.76rpx;
+}
+.multiple-images-container .feed-image-container:last-child {   
+    margin-right: 0;
+}

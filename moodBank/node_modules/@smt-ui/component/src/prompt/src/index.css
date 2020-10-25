@@ -1,0 +1,23 @@
+.container {
+    background: var(--gray-7, #f5f5f5);
+	border-radius: 18.116rpx;
+    opacity: .8;
+}
+
+.container .prompt {
+    padding: 30.797rpx 25.362rpx 29.589rpx;
+}
+
+.container .prompt .prompt-title,
+.container .prompt .prompt-content {
+    font-size: var(--font-size-xs, 25.36rpx);
+    color: var(--gray-3, #999);
+}
+
+.container .prompt .prompt-content {
+    line-height: 40.459rpx;
+}
+
+.container .prompt .prompt-title {
+    margin-bottom: 5.435rpx;
+}

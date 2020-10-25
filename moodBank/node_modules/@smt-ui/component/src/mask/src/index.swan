@@ -1,0 +1,28 @@
+<view class="mask-container" s-if="showMask!=0">
+    <view class="guide-container" style="padding-top: calc({{isCustom ? statusBarHeight + navigationBarHeight + 'px + 77.29rpx': '0'}})">
+        <guide-item class="guide-item" index="1">
+            <view class="detail-container">
+                <view class="guide-detail">点击菜单</view>
+                <image class="guide-one" src="../assets/image1.png"></image>
+                <image class="guide-arrow" style="margin-top: {{isCustom ? statusBarHeight + navigationBarHeight + 'px;': '0;'}}" src="../assets/arrow.png"></image>
+            </view>
+        </guide-item>
+        <guide-item class="guide-item" index="2">
+            <view class="detail-container">
+                <view class="guide-detail">点击关注按钮，关注小程序</view>
+                <image class="guide-two" src="../assets/image2.png"></image>
+            </view>
+        </guide-item>
+        <guide-item class="guide-item" index="3" is-last>
+            <view class="detail-container">
+                <view class="guide-detail">在“百度APP-我的”快速找到小程序，下次使用更方便</view>
+                <image class="guide-three" src="../assets/image3.png"></image>
+                <view class="guide-mininapp">
+                    <view class="miniapp-icon" style="{{icon ? 'background-image:url(' + icon + ')' : ''}}"></view>
+                    <view class="miniapp-name">{{name}}</view>
+                </view>
+            </view>
+        </guide-item>
+        <button class="close-btn" type="default" catchtap="closeMask">我知道了</button>
+    </view>
+</view>

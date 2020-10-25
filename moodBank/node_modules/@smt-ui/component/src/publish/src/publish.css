@@ -1,0 +1,252 @@
+/* banner */
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+.wrapper {
+}
+
+.header-area {
+    height: 97.74rpx;
+    margin: 0 5vw;
+}
+
+.header-area .header-shell {
+    position: fixed;
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    height: 97.74rpx;
+    left: 5vw;
+    right: 5vw;
+    box-sizing: border-box;
+    align-items: center;
+    border-bottom: .6rpx solid #e6e6e6;
+}
+
+.content-area,
+.tips-area {
+    margin: 0 5vw;
+}
+
+.content-area {
+    position: relative;
+    padding-top: 31.98rpx;
+    padding-bottom: 65.16rpx;
+}
+
+.content-area textarea {
+    width: 100%;
+    height: 234.09rpx;
+    color: #000;
+}
+
+.placeholder {
+    color: #ccc;
+}
+
+.title-input,
+.content-input,
+.placeholder {
+    font-size: 32.58rpx;
+    line-height: 32.58rpx;
+}
+
+.title-input {
+    margin-right: 20px;
+    color: #000;
+}
+
+.picture-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-bwtween;
+    margin: 0 0 30.77rpx 5vw;
+}
+
+.tips-area {
+    margin-top: 36.20rpx;
+    display: flex;
+}
+
+.tips-area text {
+    font-size: 28.96rpx;
+    color: #ccc;
+}
+
+.picture {
+    position: relative;
+    width: 224.44rpx;
+    height: 224.44rpx;
+    overflow: hidden;
+    margin-top: 7.24rpx;
+    margin-right: 7.24rpx;
+    border: 1rpx solid rgba(0, 0, 0, .1);
+    border-radius: 5.43rpx;
+}
+
+.picture .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 34.39rpx;
+    width: 34.39rpx;
+    background: url(./images/image-delete.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.picture image {
+    border-radius: 5.43rpx;
+    transform: translate(-50%, -50%);
+    margin: 50% 0 0 50%;
+}
+
+.add-picture {
+    width: 54.30rpx;
+    height: 54.30rpx;
+    text-align: center;
+    background: url(./images/image-select.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.add-picture-big {
+    height: 224.44rpx;
+    width: 224.44rpx;
+    background: url(./images/image-add-picture.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    border: none;
+}
+
+.bottom-area {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: .6rpx solid #e6e6e6;
+    padding: 15.08rpx 5vw 0;
+}
+
+.bottom-area .button {
+    font-size: 15px;
+    width: 103.17rpx;
+    height: 50.68rpx;
+    line-height: 50.68rpx;
+    text-align: center;
+    font-size: 23.53rpx;
+    color: #fff;
+    background: #38f;
+    border-radius: 15px;
+    letter-spacing: 0;
+    border-radius: 2px;
+    padding: 0;
+    margin: 0;
+}
+
+.button:after {
+    border: none;
+}
+
+.bottom-area .bottom-shell .button.disable {
+    background: rgba(51, 136, 255, .2);
+}
+
+.china-red .bottom-area .bottom-shell .button.disable {
+    background: rgba(247, 83, 79, .2);
+}
+
+.clear-title {
+    position: absolute;
+    display: none;
+    right: 5vw;
+    top: 50%;
+    margin-top: -13.275rpx;
+    height: 26.55rpx;
+    width: 26.55rpx;
+    background: url(./images/image-clear.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.focus.has-content .clear-title {
+    display: block;
+}
+
+.china-red .bottom-area .button:after {
+    height: 100%;
+}
+
+.china-red .bottom-area {
+    display: block;
+    border-top: none;
+    height: 117.65rpx;
+    padding: 76.02rpx 5vw 0;
+}
+
+.bottom-area .bottom-shell {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.china-red .bottom-area .bottom-shell {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14.48rpx 5vw;
+    height: 117.65rpx;
+}
+
+.china-red .bottom-area .addon-area {
+    display: none;
+}
+
+.china-red .bottom-area .button {
+    height: 88.69rpx;
+    line-height: 88.69rpx;
+    width: 100%;
+    font-size: 32.58rpx;
+    background: rgba(247, 83, 79, 1);
+    border-radius: 9.05rpx;
+}
+
+.china-red .bottom-area .bottom-shell .button.disable {
+    background: #fedddc;
+}
+
+.china-red .content-area {
+    padding-bottom: 72.40rpx;
+}
+
+.content-area .content-tips {
+    position: absolute;
+    bottom: 23.53rpx;
+    margin-bottom: -12.67rpx;
+    right: 0;
+    font-size: 25.34rpx;
+    color: #f00;
+}
+
+.content-area .content-tips .left-tips {
+    color: #ccc;
+}
+
+.china-red .title-input,
+.china-red .content-input {
+    font-size: 28.96rpx;
+    line-height: 45.25rpx;
+}
+
+/*.china-red .content-area {
+    padding-top: 0;
+}*/
+
+.china-red .bottom-area .button.button-hover {
+    background: rgba(247, 83, 79, .5);
+}
+
+.china-red .picture-area {
+    margin: 0 0 0 5vw;
+}

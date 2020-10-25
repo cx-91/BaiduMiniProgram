@@ -1,0 +1,47 @@
+<filter module="utils">
+export default {
+    computeTips: function (content, contentLimit, tipsEdge) {
+        if (content.length < (contentLimit - tipsEdge)) {
+            return '';
+        }
+        if (content.length <= contentLimit) {
+            return '剩余' + (contentLimit - content.length) + '字'; 
+        }
+        if ((content.length - contentLimit) > 999) {
+            return '超999+字';
+        }
+        return '超' + (content.length - contentLimit) + '字';
+    }
+}
+</filter>
+<view class="textarea-class container {{theme}}-content-area">
+    <view class="content-area textarea-content-class"
+        style="width: {{width}}">
+        <textarea
+            cursor-spacing="60"
+            placeholder="{{placeholder}}"
+            placeholder-style="{{placeholderStyle}}"
+            class="textarea-input-class input-area {{autoHeight ? 'auto-height' : 'fixed-height'}}"
+            bindinput="onChange"
+            value="{=content=}"
+            auto-height="{{autoHeight}}"
+            maxlength="{{maxLength}}"
+            bindconfirm="onConfirm"
+            bindblur="onBlur">
+        </textarea>
+        <view  s-if="promptType ==='text'"
+            class="tips-area {{content.length <= contentLimit ? 'remain-tips' : ''}}">
+            {{utils.computeTips(content, contentLimit, tipsEdge)}}
+        </view>  
+    </view>
+    <button s-if="theme === 'border'"
+        class="textarea-button-class textarea-submit"
+        bindtap="onSubmit"
+        size="mini" 
+        type="primary"
+        disabled="{{!content}}" 
+        form-type="submit" 
+        hover-class="button-hover">
+    {{submitText}}
+    </button> 
+</view>

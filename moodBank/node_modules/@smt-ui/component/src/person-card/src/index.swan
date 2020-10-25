@@ -1,0 +1,16 @@
+<view
+    class="person-card person-card-wrap {{type === 'big' ? 'person-card-big' : ''}}"
+    style="{{bgImg !== '' ? 'background-image: url(' + bgImg + ');' : ''}}"
+>
+    <view class="info-name info-name-wrap">{{name}}</view>
+    <view class="info-wrap">
+        <block s-for="item, index in infoList">
+            <view class="info-item" s-if="index <= 4">
+                <view class="info-title info-title-wrap">
+                    {{item.title}}
+                </view>
+                <view class="info-desc info-desc-wrap">{{item.desc}}</view>
+            </view>
+        </block>
+    </view>
+</view>

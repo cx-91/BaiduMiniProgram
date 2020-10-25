@@ -1,0 +1,66 @@
+@keyframes circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72.46rpx;
+    width: 100%;
+    font-size: 21.74rpx;
+    letter-spacing: 0;
+    line-height: 1.2;
+    box-sizing: content-box;
+}
+
+.spin.secure-bottom {
+    padding-bottom: 72.46rpx;
+}
+
+.spin .spin-icon {
+    width: 28.99rpx;
+    height: 28.99rpx;
+    animation: circle 1s linear infinite;
+    flex-shrink: 0;
+    margin-right: 9.66rpx;
+}
+
+.spin.spin-hover-feedback {
+    opacity: .2;
+}
+
+.spin .text {
+    justify-self: center;
+    align-self: center;
+    color: var(--spin-text, #333);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    width: 392.51rpx;
+}
+
+.spin .text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 392.51rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.spin .text-wrap .text {
+    width: auto;
+}
+
+.spin.dark .text {
+    color: var(--dark-spin-text, #fff);
+}

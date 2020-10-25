@@ -1,0 +1,4 @@
+<!-- top.swan -->
+<view class="top-container {{isPhoneX ? 'top-container-ipx' : ''}}" bindtap="backToTop">
+    <!-- <image class="quote-mask" mode="widthFix" src="../../images/top.svg"></image> -->
+</view>

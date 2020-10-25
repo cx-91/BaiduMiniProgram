@@ -1,0 +1,45 @@
+<view class="wrapper {{theme}}">
+    <form bindsubmit="onSubmit">
+        <view class="header-area {{focusingClass}} {{contentClass}}">
+            <view class="header-shell">
+                <input name="title" placeholder="{{titlePlaceHolder}}" placeholder-class="publish__placeholder" class="title-input" maxlength="{{titleLimit}}" bindinput="onTitleChange" auto-focus="true" value="{=title=}" bindfocus="titleFocus" bindblur="titleBlur"/>
+                <view class="clear-title" bindtap="clearTitle"></view>
+            </view>
+        </view>
+        <view class="content-area">
+            <textarea name="content" placeholder="{{contentPlaceHolder}}" placeholder-class="publish__placeholder" class="content-input" bindinput="onContentChange" value="{=content=}" maxlength="-1" auto-height="{{contentAutoHeight}}" style="height: {{contentHeight}};" show-confirm-bar="false"></textarea>
+            <view
+                class="content-tips"
+                s-if="contentLimit > 0 && content.length > (contentLimit - tipsEdge)"
+            >
+                <text s-if="content.length <= contentLimit" class="left-tips">
+                    剩{{contentLimit - content.length}}字
+                </text>
+                <text s-else>
+                    超{{(content.length - contentLimit) > 999 ? '999+' : content.length - contentLimit}}字
+                </text>
+            </view>
+        </view>
+        <view class="picture-area">
+            <view class="picture" s-for="item, index in pictureList">
+                <view class="close" bindtap="delPicture" data-index="{{index}}"></view>
+                <image src="{{item}}" bindtap="viewPicture" data-index="{{index}}"></image>
+            </view>
+            <view s-if="pictureList.length < pictureLimit" class="add-picture-big picture" bindtap="addPicture">
+            </view>
+        </view>
+        <view s-if="{{showPictureTips}}" class="tips-area">
+            <text>支持最多{{pictureLimit}}张图片，单张体积{{pictureSizeLimit/1000000}}M以下</text>
+        </view>
+        <view class="bottom-area">
+            <view class="bottom-shell">
+                <view class="addon-area">
+                    <view class="add-picture" bindtap="addPicture"></view>
+                </view>
+                <button class="button {{disableStatus}}" form-type="submit" hover-class="button-hover">
+                    {{theme !== '' ? '提交' : '发布'}}
+                </button>
+            </view>
+        </view>
+    </form>
+</view>

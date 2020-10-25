@@ -1,0 +1,11 @@
+<view
+    class="spin smt-spin-wrap {{theme === 'dark' ? 'dark' : ''}} {{(needSecureBottom && secureBottom) ? 'secure-bottom' : ''}}"
+    hover-class="{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}"
+    hover-stay-time="200"
+>
+    <view s-if="status === 1" class="text-wrap">
+        <image s-if="status === 1" class="spin-icon" src="./imgs/loading{{theme && '-re'}}.png"/>
+        <text class="text smt-spin-text">{{textConfig[status]}}</text>
+    </view>
+    <text s-else class="text smt-spin-text">{{textConfig[status]}}</text>
+</view>

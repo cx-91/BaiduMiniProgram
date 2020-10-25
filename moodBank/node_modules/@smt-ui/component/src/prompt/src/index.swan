@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="prompt prompt-class">
+        <view class="prompt-title title-class">
+            <slot name="title">温馨提示标题：</slot>
+        </view>
+        <view class="prompt-content content-class">
+            <slot name="content">温馨提示内容温馨提示内容</slot>
+        </view>
+    </view>
+</view>

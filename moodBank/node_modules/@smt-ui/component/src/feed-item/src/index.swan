@@ -1,0 +1,75 @@
+<view s-if="{{showList}}" 
+    class="feed-item-area {{statusMap[status]}} {{isAcive ? 'active': ''}}" 
+    bindtouchstart="onTouchStart"
+    bindtouchend="onTouchEnd">
+    <!-- 默认模式：左文右图&纯文本 -->
+    <view s-if="{{theme === 'default'}}"
+        class="feed-item-container custom-border default-container {{content.images.length ? '' : 'only-text'}}">
+        <view class="feed-word-container">
+            <text class="title">
+                {{content.title}}
+            </text>
+            <view class="details">
+                <view class="info-source">
+                    {{content.infoSource}}
+                </view>
+                <view>
+                    {{content.commentsNum}}评论
+                </view>
+            </view>
+        </view>
+        <view class="feed-image-container {{imageLoaded? 'loaded' : ''}}">
+            <image lazy-load src="{{content.images[0]}}" bindload="imageLoadedHandle" mode="aspectFill"></image>
+            <view 
+                s-if="{{video && video.isVideo}}"
+                class="video-info">
+                <view class="triAngle"></view>
+                <view>{{video.time}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 大图模式：单图 -->
+    <view s-if="{{theme === 'large-image'}}" class="feed-item-container large-image-container">
+        <view class="feed-word-container">
+            <text class="title">{{content.title}}</text>
+            <view class="feed-image-container {{imageLoaded? 'loaded' : ''}}">
+                <image lazy-load src="{{content.images[0]}}" bindload="imageLoadedHandle" mode="aspectFill"></image>           
+                <view 
+                    s-if="{{video && video.isVideo}}"
+                    class="video-info">
+                    <view class="triAngle"></view>
+                </view>
+                <view s-if="{{video && video.isVideo}}" class="video-time">{{video.time}}</view>
+            </view>
+            <view class="details">
+                <view class="info-source">
+                    {{content.infoSource}}
+                </view>
+                <view>
+                    {{content.commentsNum}}评论
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 多图模式 -->
+    <view s-if="{{theme === 'multiple-images'}}"
+        class="feed-item-container multiple-images-container">
+        <view class="feed-word-container">
+            <text class="title">{{content.title}}</text>
+            <view class="images-list-container">
+                <view s-for="item in content.images"
+                    class="feed-image-container {{imageLoaded? 'loaded' : ''}}">
+                     <image lazy-load src="{{item}}" bindload="imageLoadedHandle" mode="aspectFill"></image>
+                </view>
+            </view>
+            <view class="details">
+                <view class="info-source">
+                    {{content.infoSource}}
+                </view>
+                <view>
+                    {{content.commentsNum}}评论
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

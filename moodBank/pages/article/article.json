@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "页面标题",
+    "usingComponents": {
+        "quote": "../../components_article/quote/quote",
+        "top": "../../components_article/top/top",
+        "smt-page-status": "@smt-ui/component/src/page-status"
+    }
+}

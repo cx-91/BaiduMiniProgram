@@ -1,0 +1,5 @@
+<!-- quote.swan -->
+<view class="quote-container">
+    <image class="quote-mask" mode="widthFix" src="../../images/quote.svg"></image>
+    <text class="quote-content" selectable>{{content}}</text>
+</view>

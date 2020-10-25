@@ -1,0 +1,133 @@
+.steps {
+    width: 100%;
+    padding: 43.478rpx 0 40.459rpx;
+    background: var(--white, #fff);
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.steps-flex {
+    display: flex;
+}
+
+.steps-block {
+    white-space: nowrap;
+}
+
+.steps-flex .step,
+.steps-block .step {
+    position: relative;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.steps-flex .step:last-child .step-line,
+.steps-block .step:last-child .step-line {
+    display: none;
+}
+
+.steps-flex .step.is-flex,
+.steps-block .step.is-flex {
+    flex: 1;
+}
+
+.steps-flex .step.is-block,
+.steps-block .step.is-block {
+    display: inline-block;
+}
+
+.steps-flex .step-head,
+.steps-block .step-head {
+    text-align: center;
+}
+
+.steps-flex .step-line,
+.steps-block .step-line {
+    position: absolute;
+    height: 0;
+    left: calc(50% + 37.44rpx);
+    right: calc(-50% + 37.44rpx);
+}
+
+.steps-flex .step-head,
+.steps-block .step-head {
+    position: relative;
+}
+
+.steps-flex .step-head .smt-icon,
+.steps-block .step-head .smt-icon {
+    display: inline-block;
+    width: 36.232rpx;
+    height: 36.232rpx;
+}
+
+.steps-flex .step-head .step-icon,
+.steps-block .step-head .step-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 36.232rpx;
+    height: 36.232rpx;
+}
+
+.steps-flex .step-main,
+.steps-block .step-main {
+    margin-top: 1.208rpx;
+}
+
+.steps-flex .step-main .step-title,
+.steps-block .step-main .step-title {
+    font-size: var(--font-size-sm, 28.986rpx);
+    line-height: 44.686rpx;
+    white-space: normal;
+    text-align: center;
+    color: var(--gray-4, #ccc);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.steps-flex .step-main .twoSteps,
+.steps-block .step-main .twoSteps {
+    width: 181.159rpx;
+    margin-left: 96.618rpx;
+}
+
+.steps-flex .step-main .threeSteps,
+.steps-block .step-main .threeSteps {
+    width: 181.159rpx;
+    margin-left: 35.024rpx;
+}
+
+.steps-flex .step-main .fourSteps,
+.steps-block .step-main .fourSteps {
+    width: 150.966rpx;
+    margin-left: 18.72rpx;
+}
+
+.steps-flex .step-main .moreSteps,
+.steps-block .step-main .moreSteps {
+    width: 150.966rpx;
+    margin-left: 18.72rpx;
+}
+
+.steps-flex .step-main .step-desc,
+.steps-block .step-main .step-desc {
+    font-size: var(--font-size-xs, 25.362rpx);
+    line-height: 38.043rpx;
+    margin-top: 5.435rpx;
+    white-space: normal;
+    text-align: center;
+    color: var(--gray-3, #999);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

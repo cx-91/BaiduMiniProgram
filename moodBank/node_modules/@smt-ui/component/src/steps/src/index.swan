@@ -1,0 +1,138 @@
+<view class="steps steps-class steps-{{direction}}">
+    <view
+        s-if="steps.length < 5"
+        class="steps-flex steps-flex-class"
+    >
+        <view
+            class="step is-flex step-class"
+            s-for="item, index in steps"
+            id="id_{{index}}"
+        >
+            <view class="step-head step-head-class">
+                <view class="step-icon" s-if="{{item.icon && item.activeIcon}}">
+                    <smt-icon
+                        s-if="{{active >= index + 1}}"
+                        name="{{item.activeIcon}}"
+                        size="36.232rpx"
+                        color="{{item.iconActiveColor ? item.iconActiveColor : colorBlue}}"
+                    >
+                    </smt-icon>
+                    <smt-icon
+                        s-else
+                        name="{{item.icon}}"
+                        size="36.232rpx"
+                        color="{{item.iconColor ? item.iconColor : '#ccc'}}"
+                    >
+                    </smt-icon>
+                </view>
+                <smt-icon
+                    name="{{index > 8 ? '' : ('step-' + stepName[index])}}"
+                    size="36.232rpx"
+                    color="{{active >= index + 1 ? activeColor : color}}"
+                    class="smt-icon"
+                >
+                </smt-icon>
+                <view
+                   class="step-line"
+                   style="
+                       border-top-color: {{active >= index + 2 ? lineActiveColor : lineColor}};
+                       border-top-style: {{active >= index + 2 ? lineActiveStyle : lineStyle}};
+                       border-top-width: {{lineWidth}}rpx; top: {{18.1 - lineWidth / 2}}rpx
+                    "
+                >
+                </view>
+            </view>
+            <view class="step-main step-main-class">
+                <view
+                    class="
+                        step-title
+                        {{
+                            steps.length === 2
+                            ? 'twoSteps'
+                            : steps.length === 3
+                            ? 'threeSteps'
+                            : steps.length === 4
+                            ? 'fourSteps'
+                            : ''
+                        }}
+                    "
+                    style="color: {{active >= index + 1 ? titleActiveColor : titleColor}}"
+                >
+                    {{item.text}}
+                </view>
+                <view
+                    s-if="{{item.desc}}"
+                    class="step-desc"
+                    style="color: {{active >= index + 1 ? descActiveColor : descColor}}"
+                >
+                    <text>
+                        {{item.desc}}
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <scroll-view
+        s-else
+        scroll-x
+        scroll-into-view="{= scrollIntoView =}"
+        class="steps-block steps-block-class"
+    >
+        <view
+            class="step is-block step-class"
+            style="width: {{space}}rpx;"
+            s-for="item, index in steps"
+            id="id_{{index}}"
+        >
+            <view class="step-head step-head-class">
+                <view class="step-icon" s-if="{{item.icon && item.activeIcon}}">
+                    <smt-icon
+                        s-if="{{active >= index + 1}}"
+                        name="{{item.activeIcon}}"
+                        size="36.232rpx"
+                        color="{{item.iconActiveColor ? item.iconActiveColor : colorBlue}}"></smt-icon>
+                    <smt-icon
+                        s-else
+                        name="{{item.icon}}"
+                        size="36.232rpx"
+                        color="{{item.iconColor ? item.iconColor :'#ccc'}}"
+                    >
+                    </smt-icon>
+                </view>
+                <smt-icon
+                    name="{{index > 8 ? '' : ('step-' + stepName[index])}}"
+                    size="36.232rpx"
+                    color="{{active >= index + 1 ? activeColor : color}}"
+                    class="smt-icon"
+                >
+                </smt-icon>
+                <view
+                    class="step-line"
+                    style="
+                        border-top-color: {{active >= index + 2 ? lineActiveColor : lineColor}};
+                        border-top-style: {{active >= index + 2 ? lineActiveStyle : lineStyle}};
+                        border-top-width: {{lineWidth}}rpx; top: {{18.1 - lineWidth/2}}rpx
+                    "
+                >
+                </view>
+            </view>
+            <view class="step-main step-main-class">
+                <view
+                    class="step-title  moreSteps"
+                    style="color: {{active >= index + 1 ? titleActiveColor : titleColor}}"
+                >
+                    {{item.text}}
+                </view>
+                <view
+                    s-if="{{item.desc}}"
+                    class="step-desc"
+                    style="color: {{active >= index + 1 ? descActiveColor : descColor}}"
+                >
+                    <text>
+                        {{item.desc}}
+                    </text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

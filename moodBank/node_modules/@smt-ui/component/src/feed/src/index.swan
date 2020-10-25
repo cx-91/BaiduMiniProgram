@@ -1,0 +1,30 @@
+<view class="smt-feed-wrap smt-feed-container {{theme === 'dark' ? 'dark' : ''}}"
+    bind:touchstart="touchHdl"
+    bind:touchmove="touchHdl"
+    bind:touchend="touchHdl"
+>
+    <view class="loading smt-feed-loading"
+        style="
+            top: -{{loadingHeight}}px;
+            height: {{loadingHeight}}px;
+            transform: translate3d(0, {{offsetY}}px, 0);
+            transition: {{enableScroll && offsetY >= 0 ? 'transform 200ms ease-out' : 'unset'}}
+        "
+    >
+        <include src="../../refresh/src/index.swan" />
+    </view>
+    <scroll-view
+        class="content smt-feed-content"
+        scroll-y="{{enableScroll && !disableTouch}}"
+        style="
+            height: 100%; transform: translate3d(0, {{offsetY}}px, 0);
+            transition: {{enableScroll && offsetY >= 0 ? 'transform 200ms ease-out' : 'unset' }}
+        "
+        scroll-top="{= scrollTop =}"
+        bind:scroll="scrollHdl"
+        lower-threshold="{{lowerThreshold}}"
+        bind:scrolltolower="scrollToLower"
+    >
+        <slot></slot>
+    </scroll-view>
+</view>

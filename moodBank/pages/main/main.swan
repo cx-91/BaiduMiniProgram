@@ -1,59 +1,47 @@
-<!--miniprogram/pages/main/main.wxml-->
-
-<view class="wrap">
+<view class="wrap" style="background-color: #d3d3d3; padding-top: 2px;">
     <view class="card-area">
-        <canvas
-            canvas-id="mycanvas"
-            disable-scroll="false"
-            bindtouchstart="touchstart"
-            bindtouchmove="touchmove"
-            bindtouchend="touchend"
-            bindtouchcancel="touchcancel"
-            bindlongtap="longtap"
+        <canvas class="myCanvas" canvas-id="mycanvas" disable-scroll="false" bindtouchstart="touchstart"
+            bindtouchmove="touchmove" bindtouchend="touchend" bindtouchcancel="touchcancel" bindlongtap="longtap"
             binderror="error">
         </canvas>
-        <view class="center-text">{{resultComment}}</view>
     </view>
-
-    <!-- <view class="card-area">
-        <view class="top-description border-bottom">今天我的表情？</view>
-        <label class="block border-bottom">
-            <checkbox checked>哭</checkbox>
-        </label>
-        <label class="block border-bottom">
-            <checkbox>无表情</checkbox>
-        </label>
-        <label class="block border-bottom">
-            <checkbox>笑</checkbox>
-        </label> -->
-
-<view class="wrap">
     <view class="card-area">
-        <view class="top-description border-bottom">
-            <view>多列选择器</view>
-            <view>mode="multiSelector"</view>
-        </view>
-        <view class="section date-section" hover-class="section-active">
-            <picker mode="multiSelector"
-                    bindchange="bindMultiPickerChange"
-                    bindcolumnchange="bindMultiPickerColumnChange"
-                    value="{{multiIndex}}"
-                    range="{{multiArray}}"
-                    title="多列选择器">
-                <view class="picker">
-                    <text class="chooseItem">今天的心情:</text>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}
+        <form bindsubmit="saveMood">
+            <view class="mood-wrapper" style="display: {{moodSelectorDisplay}}">
+                <view class="top-description border-bottom">
+                    你此刻的心情
                 </view>
-            </picker>
-        </view>
+                <view class="mood-selector">
+                    <radio-group name="mood" bindchange="moodChange">
+                        <radio value="happy">
+                            <label>快乐</label>
+                        </radio>
+                        <radio value="sad">
+                            <label>难过</label>
+                        </radio>
+                        <radio value="calm">
+                            <label>平静</label>
+                        </radio>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="textinput-wrapper" style="display: {{textInputDisplay}}">
+                <view class="top-description border-bottom">
+                    <view>描述你此刻的心情</view>
+                </view>
+                <textarea name="text" auto-focus="{{true}}" confirm-type="done" maxlength="-1" placeholder="在这里输入" bindconfirm="textConfirm" />
+            </view>
+            <view class="button-group" style="display: {{buttonGroupDisplay}}">
+                <button form-type="reset" bind:tap="resetview">重置</button>
+                <button form-type="buttonclick" bind:tap="download">保存</button>
+                <button form-type="submit">提交</button>
+            </view>
+        </form>
     </view>
-</view>
-
-    <view class="card-area">
-        <view class="top-description border-bottom">给自己的留言</view>
-        <input class="normalInput" placeholder="请在此输入标题" />
-    </view>
-
-    <button>
-        提交
-    </button>
+    <!-- <button
+        style="margin-top: 10px; background-color: #020017; color: #f3f3f3; border: none"
+        bind:tap="download"
+    >
+        Download this Image
+    </button> -->
 </view>

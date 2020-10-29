@@ -25,11 +25,47 @@
                     </radio-group>
                 </view>
             </view>
+            <view class="mood-wrapper" style="display: {{impactSelectorDisplay}}">
+                <view class="top-description border-bottom">
+                    你的心情对你今天的生活产生了多少影响
+                </view>
+                <view class="mood-selector">
+                    <radio-group name="impact" bindchange="impactChange">
+                        <radio value="no">
+                            <label>没有</label>
+                        </radio>
+                        <radio value="alittle">
+                            <label>一般</label>
+                        </radio>
+                        <radio value="alot">
+                            <label>很多</label>
+                        </radio>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="mood-wrapper" style="display: {{changeSelectorDisplay}}">
+                <view class="top-description border-bottom">
+                    对你的心情，你想做出改变吗
+                </view>
+                <view class="mood-selector">
+                    <radio-group name="change" bindchange="changeChange">
+                        <radio value="no">
+                            <label>不想</label>
+                        </radio>
+                        <radio value="dontknow">
+                            <label>不知道</label>
+                        </radio>
+                        <radio value="yes">
+                            <label>我想</label>
+                        </radio>
+                    </radio-group>
+                </view>
+            </view>
             <view class="textinput-wrapper" style="display: {{textInputDisplay}}">
                 <view class="top-description border-bottom">
-                    <view>描述你此刻的心情</view>
+                    <view>输入你的留言（30个字以内）</view>
                 </view>
-                <textarea name="text" auto-focus="{{true}}" confirm-type="done" maxlength="-1" placeholder="在这里输入" bindconfirm="textConfirm" />
+                <textarea name="text" auto-focus="{{true}}" confirm-type="done" maxlength="30" placeholder="在这里输入" bindconfirm="textConfirm" />
             </view>
             <view class="button-group" style="display: {{buttonGroupDisplay}}">
                 <button form-type="reset" bind:tap="resetview">重置</button>

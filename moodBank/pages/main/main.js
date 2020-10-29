@@ -11,6 +11,8 @@ Page({
         per: '',
         textInputDisplay: 'none',
         moodSelectorDisplay: 'inline-block',
+        impactSelectorDisplay: 'none',
+        changeSelectorDisplay: 'none',
         buttonGroupDisplay: 'none',
         screenWidth: 300,
         screenHeight: 600
@@ -158,12 +160,48 @@ Page({
                 })
                 .exec(function(rect){
                     that.setData({
-                        textInputDisplay: 'inline-block',
+                        impactSelectorDisplay: 'inline-block',
                         moodSelectorDisplay: 'none'
                     })
                 })
         }, 500);
 
+    },
+    impactChange(e) {
+        const impact = e.detail.value;
+        var that = this;
+        setTimeout(function() {
+            const query = swan.createSelectorQuery();
+            query
+                .select('.mood-selector')
+                .boundingClientRect(function (res) {
+                    // console.log(res);
+                })
+                .exec(function(rect){
+                    that.setData({
+                        changeSelectorDisplay: 'inline-block',
+                        impactSelectorDisplay: 'none'
+                    })
+                })
+        }, 500);
+    },
+    changeChange(e) {
+        const change = e.detail.value;
+        var that = this;
+        setTimeout(function() {
+            const query = swan.createSelectorQuery();
+            query
+                .select('.mood-selector')
+                .boundingClientRect(function (res) {
+                    // console.log(res);
+                })
+                .exec(function(rect){
+                    that.setData({
+                        changeSelectorDisplay: 'none',
+                        textInputDisplay: 'inline-block'
+                    })
+                })
+        }, 500);
     },
     textConfirm(e) {
         // console.log(e);

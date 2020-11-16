@@ -1,11 +1,8 @@
 .card-area {
     position: relative;
+    background: #ffffff;
 }
 
-
-.myCanvas {
-    height: 70vh;
-}
 
 .center-text {
     width: 100%;
@@ -35,22 +32,31 @@
     width: 0;
 }
 
+swan-radio-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .swan-radio-wrapper swan-label {
     display: inline-block;
-    background-color: #ddd;
-    padding: 10px 20px;
-    border: 2px solid #444;
-    border-radius: 4px;
+    background-color: #f2f4f8;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 20px;
     margin: auto 10px;
+    letter-spacing: 2px;
 }
 
 .swan-radio-input-checked + swan-label {
-    background-color: #bfb !important;
-    border-color: #4c4 !important;
+    background-color: #a7f0ba !important;
 }
 
 .mood-selector {
-    padding: 10px 0;
+    height: 15%;
+    display: flex;
+    align-items: center;
 }
 
 .mood-selector radio-group {
@@ -58,7 +64,12 @@
     display: flex;
 }
 
-.textinput-wrapper textarea {
+.mood-wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+textarea {
     padding: 10px;
     font-size: inherit;
     height: 60px;
@@ -66,4 +77,53 @@
 
 .button-group {
     justify-content: center;
+    width: 90%;
+    align-items: center;
+    transition: opacity ease 1s;
+}
+
+.button-group swan-button {
+    display: inline-block;
+    background-color: #f2f4f8;
+    border: none !important;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: auto 10px;
+    letter-spacing: 2px;
+}
+.button-group swan-button:after {
+    border: none !important;
+}
+
+.question-wrapper {
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mood-wrapper {
+    height: 100%;
+    transition: opacity ease 1s;
+}
+
+.svg {
+    position: absolute;
+    height: 40%;
+    top: 30%;
+    width: 70%;
+    left: 15%;
+    z-index: 1;
+}
+
+.show {
+    position: relative;
+    opacity: 100;
+}
+
+.hide {
+    position: absolute;
+    opacity: 0;
+    height: 0;
 }

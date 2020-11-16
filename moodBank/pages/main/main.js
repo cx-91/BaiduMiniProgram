@@ -6,16 +6,17 @@ const app = getApp()
 
 Page({
     data: {
-        timer: '',
-        resultComment: '',
-        per: '',
-        textInputDisplay: 'none',
-        moodSelectorDisplay: 'inline-block',
-        impactSelectorDisplay: 'none',
-        changeSelectorDisplay: 'none',
         buttonGroupDisplay: 'none',
+        cardDisplay: 'inline-block',
         screenWidth: 300,
-        screenHeight: 600
+        screenHeight: 600,
+        moodShow: "show",
+        impactShow: "hide",
+        changeShow: "hide",
+        canvasShow: "hide",
+        textShow: "hide",
+        buttonGroupShow: "hide",
+        cardShow: "show",
     },
     onLoad() {
         this.canvasContext = swan.createCanvasContext('mycanvas');
@@ -60,49 +61,6 @@ Page({
     },
     error(e) {
         console.log('error', e.detail.errMsg);
-    },
-    good() {
-        const context = this.canvasContext;
-        context.drawImage('/images/Egg.png', 50, 50, 200, 250);
-        context.draw();
-    },
-    notbad() {
-        const context = this.canvasContext;
-        context.drawImage('/images/smile.png', 50, 60, 200, 200);
-        context.draw(true);
-    },
-    bad() {
-        const ctx = this.canvasContext;
-        // ctx.beginPath();
-        // const cx = 175;
-        // const cy = 255;
-        // const spikes = 5;
-        // const outerRadius = 30;
-        // const innerRadius = 15;
-        // let rot = Math.PI/2*3;
-        // ctx.moveTo(cx,cy-outerRadius)
-        // let x = cx;
-        // let y = cy;
-        // let step = Math.PI/spikes;
-        // for(let i=0;i<spikes;i++){
-        //   x=cx+Math.cos(rot)*outerRadius;
-        //   y=cy+Math.sin(rot)*outerRadius;
-        //   ctx.lineTo(x,y)
-        //   rot+=step
-
-        //   x=cx+Math.cos(rot)*innerRadius;
-        //   y=cy+Math.sin(rot)*innerRadius;
-        //   ctx.lineTo(x,y)
-        //   rot+=step
-        // }
-        // ctx.lineTo(cx,cy-outerRadius);
-        // ctx.closePath();
-        // ctx.lineWidth=5;
-        // ctx.setFillStyle('#82E0AA');
-        // ctx.fill();
-        // ctx.save();
-        ctx.drawImage('/images/rainbow.png', 10, 0, 200, 200);
-        ctx.draw(true);
     },
     download() {
         swan.canvasToTempFilePath({
@@ -160,8 +118,8 @@ Page({
                 })
                 .exec(function(rect){
                     that.setData({
-                        impactSelectorDisplay: 'inline-block',
-                        moodSelectorDisplay: 'none'
+                        moodShow: 'hide',
+                        impactShow: 'show'
                     })
                 })
         }, 500);
@@ -179,8 +137,8 @@ Page({
                 })
                 .exec(function(rect){
                     that.setData({
-                        changeSelectorDisplay: 'inline-block',
-                        impactSelectorDisplay: 'none'
+                        changeShow: 'show',
+                        impactShow: 'hide',
                     })
                 })
         }, 500);
@@ -197,8 +155,8 @@ Page({
                 })
                 .exec(function(rect){
                     that.setData({
-                        changeSelectorDisplay: 'none',
-                        textInputDisplay: 'inline-block'
+                        changeShow: 'hide',
+                        textShow: 'show',
                     })
                 })
         }, 500);
@@ -223,11 +181,13 @@ Page({
                 })
                 .exec(function(rect){
                     that.setData({
-                        textInputDisplay: 'none',
-                        buttonGroupDisplay: 'flex'
+                        textShow: 'show',
+                        buttonGroupShow: 'show',
+                        canvasShow: 'show',
+                        cardShow: 'hide'
                     })
                 })
-        }, 500);
+        }, 0);
     },
     resetview() {
         const ctx = this.canvasContext;
@@ -235,13 +195,36 @@ Page({
         ctx.draw();
         this.setData({
             buttonGroupDisplay: 'none',
-            moodSelectorDisplay: 'inline-block'
+            moodShow: 'show',
+            cardShow: 'show',
+            canvasShow: 'hide'
         })
     },
     saveMood(e) {
-        swan.showModal({
-            title: '存心情成功',
-            content: JSON.stringify(e.detail.value)
+        swan.getUserInfo({
+            success: res => {
+                const userInfo = res.userInfo;
+                const obj = {
+                    userInput: e.detail.value,
+                    userInfo: userInfo,
+                    date: new Date().toUTCString()
+                }
+                swan.showModal({
+                    title: '存心情成功',
+                    content: JSON.stringify(obj)
+                })
+            },
+            fail: err => {
+                const obj = {
+                    userInput: e.detail.value,
+                    userInfo: "NA",
+                    date: new Date().toUTCString()
+                }
+                swan.showModal({
+                    title: '存心情成功',
+                    content: JSON.stringify(obj)
+                })
+            }
         })
     }
 });

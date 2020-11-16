@@ -1,15 +1,18 @@
-<view class="wrap" style="background-color: #d3d3d3; padding-top: 2px;">
-    <view class="card-area">
+<view class="wrap" style="background-color: #d3d3d3; padding: 10px; height: 100%;">
+    <view class="card-area canvas-area {{canvasShow}}" style="height: 85%; width: 100%; margin: auto; transition: all ease 1s">
         <canvas class="myCanvas" canvas-id="mycanvas" disable-scroll="false" bindtouchstart="touchstart"
             bindtouchmove="touchmove" bindtouchend="touchend" bindtouchcancel="touchcancel" bindlongtap="longtap"
-            binderror="error">
+            binderror="error" style="width: 100%; height: 100%;">
         </canvas>
     </view>
-    <view class="card-area">
-        <form bindsubmit="saveMood">
-            <view class="mood-wrapper" style="display: {{moodSelectorDisplay}}">
-                <view class="top-description border-bottom">
-                    你此刻的心情
+    <form bindsubmit="saveMood" style="height: 100%;">
+    <view class="card-area {{cardShow}}" style="width: 100%; margin: auto; height: 100%;">
+            <view class="mood-wrapper card-area {{moodShow}}" style="width: 90%;">
+                <view class="border-bottom question-wrapper">
+                    <h4 style="letter-spacing: 2px; z-index: 2; text-align: center; color: #020017;">你此刻的心情是？</h4>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg">
+                        <path fill="#BAE6FF" d="M48.6,-56.2C58.9,-49.4,60.1,-30.1,61.6,-12.2C63.1,5.6,64.8,22,59.3,36.8C53.9,51.6,41.1,64.8,26.5,68.3C11.8,71.7,-4.8,65.3,-20.2,58.4C-35.5,51.6,-49.6,44.1,-59.5,31.9C-69.5,19.7,-75.3,2.7,-72.2,-12.3C-69,-27.3,-56.9,-40.3,-43.3,-46.5C-29.8,-52.7,-14.9,-52.2,2.2,-54.7C19.2,-57.3,38.4,-63,48.6,-56.2Z" transform="translate(100 100)" />
+                    </svg>
                 </view>
                 <view class="mood-selector">
                     <radio-group name="mood" bindchange="moodChange">
@@ -25,9 +28,12 @@
                     </radio-group>
                 </view>
             </view>
-            <view class="mood-wrapper" style="display: {{impactSelectorDisplay}}">
-                <view class="top-description border-bottom">
-                    你的心情对你今天的生活产生了多少影响
+            <view class="mood-wrapper card-area {{impactShow}}" style="width=90%">
+                <view class="border-bottom question-wrapper">
+                    <h4 style="letter-spacing: 2px; z-index: 2; text-align: center; color: #301934">你今天的心情对你<br/>造成了多少影响？</h4>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg">
+                    <path fill="#E8DAFF" d="M47.1,-58.8C60,-45.3,68.8,-29.5,72.5,-12.2C76.2,5.1,74.9,23.8,66.9,39.5C58.9,55.3,44.2,68.1,29,68.9C13.9,69.7,-1.7,58.5,-20.6,53.1C-39.5,47.7,-61.7,48.1,-72.8,37.7C-83.9,27.4,-83.9,6.3,-77.4,-10.8C-71,-27.8,-58.1,-40.8,-44.1,-54.2C-30.1,-67.5,-15,-81.2,1,-82.5C17.1,-83.7,34.2,-72.4,47.1,-58.8Z" transform="translate(100 100)" />
+                    </svg>
                 </view>
                 <view class="mood-selector">
                     <radio-group name="impact" bindchange="impactChange">
@@ -43,9 +49,11 @@
                     </radio-group>
                 </view>
             </view>
-            <view class="mood-wrapper" style="display: {{changeSelectorDisplay}}">
-                <view class="top-description border-bottom">
-                    对你的心情，你想做出改变吗
+            <view class="mood-wrapper card-area {{changeShow}}" style="width: 90%;">
+                <view class="border-bottom question-wrapper">
+                    <h4 style="letter-spacing: 2px; z-index: 2; text-align: center; color: #460a1c">对你的心情，<br/>你想做出改变吗?</h4>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg">
+                    <path fill="#FFD6E8" d="M64.2,-33.2C77.3,-14.3,78,15.6,65.3,34.1C52.5,52.7,26.2,59.9,-0.9,60.5C-28.1,61,-56.2,54.9,-66.8,37.6C-77.3,20.3,-70.3,-8.1,-56.3,-27.6C-42.2,-47,-21.1,-57.4,2.2,-58.7C25.5,-60,51.1,-52.1,64.2,-33.2Z" transform="translate(100 100)" />
                 </view>
                 <view class="mood-selector">
                     <radio-group name="change" bindchange="changeChange">
@@ -61,19 +69,19 @@
                     </radio-group>
                 </view>
             </view>
-            <view class="textinput-wrapper" style="display: {{textInputDisplay}}">
+            <view class="card-area mood-wrapper {{textShow}}" style="width: 90%;" >
                 <view class="top-description border-bottom">
-                    <view>输入你的留言（30个字以内）</view>
+                    <view>给自己写一句话（30个字以内）</view>
                 </view>
                 <textarea name="text" auto-focus="{{true}}" confirm-type="done" maxlength="30" placeholder="在这里输入" bindconfirm="textConfirm" />
             </view>
-            <view class="button-group" style="display: {{buttonGroupDisplay}}">
-                <button form-type="reset" bind:tap="resetview">重置</button>
-                <button form-type="buttonclick" bind:tap="download">保存</button>
-                <button form-type="submit">提交</button>
-            </view>
-        </form>
     </view>
+    <view class="button-group card-area {{buttonGroupShow}}" style="display: flex; width: 100%; height: 15%; margin: auto; margin-top: 10px;">
+        <button form-type="reset" bind:tap="resetview">重置</button>
+        <button form-type="buttonclick" bind:tap="download">保存</button>
+        <button form-type="submit">提交</button>
+    </view>
+    </form>
     <!-- <button
         style="margin-top: 10px; background-color: #020017; color: #f3f3f3; border: none"
         bind:tap="download"

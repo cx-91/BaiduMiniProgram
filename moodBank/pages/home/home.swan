@@ -7,7 +7,7 @@
         </view>
     </view>
     <view class="sign-container">
-        <text class="sign-guide-text">整理心情</text>
+        <text class="sign-guide-text">打卡心情</text>
         <text class="sign-num-text">{{signedNum}}</text>
         <text class="sign-num-day-text">天</text>
         <view class="calendar" bindtap='toCalendarPage'>
@@ -15,26 +15,6 @@
             <image class="calendar-icon" src="../../images/icons/calendar.png" />
         </view>
     </view>
-    <!-- <view class="vocabulary-container" data-type="{{0}}" bindtap="toDictionary">
-        <image class="vocabulary-background-image" src="../../images/backgrounds/nature.jpg" />
-        <text class="vocabulary-name-text">{{bookInfo.name}}</text>
-        <view class="vocabulary-guide">
-            <image class="vocabulary-icon" src="../../images/icons/vocabulary.png" />
-            <text class="vocabulary-guide-text">词表</text>
-        </view>
-        <view class="vocabulary-progress">
-            <view style="overflow: hidden;">
-                <text class="vocabulary-progress-text-left">已完成{{bookInfo.percentage}}%</text>
-                <text class="vocabulary-progress-text-right">{{bookInfo.studiedNum}}/{{bookInfo.totalNum}}词</text>
-            </view>
-            <view class="vocabulary-progress-bar-container">
-                <view class="vocabulary-progress-bar" />
-                <view class="vocabulary-progress-bar-mask" />
-            </view>
-        </view>
-    </view> -->
-
-    <!-- <view class="task-container" data-type="{{1}}" bindtap="toDictionary"> -->
     <view class="task-container" data-type="{{1}}">
         <text class="task-guide-text">· 心情总览 ·</text>
         <view class="task-info">
@@ -52,7 +32,10 @@
             </view>
         </view>
     </view>
-    <view class="start-button"  bindtap="toDictionary">取心情</view>
-    <view s-if="!complete" class="start-button" bindtap="startMain">存心情</view>
-    <view s-else class="start-button">已完成</view>
+    <view class="button-container">
+        <view class="start-button"  bindtap="toDictionary">取心情</view>
+        <view s-if="!complete" class="start-button" bindtap="startMain">存心情</view>
+        <view s-else class="start-button">已完成</view>
+    </view>
+
 </view>

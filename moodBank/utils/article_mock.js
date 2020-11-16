@@ -5,7 +5,7 @@
 export const articleInfo = {
     errno: 0,
     msg: 'success',
-    data: {
+    data: [{
         id:'0',
         articleId: '0',
         title: '颜色和情绪：颜色怎样影响你感受',
@@ -401,7 +401,7 @@ export const articleInfo = {
         }
       ]
     }
-
+]
 };
 
 export const followInfo = {

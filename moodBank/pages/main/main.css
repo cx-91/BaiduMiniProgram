@@ -41,16 +41,17 @@ swan-radio-group {
 
 .swan-radio-wrapper swan-label {
     display: inline-block;
-    background-color: #f2f4f8;
+    background-color: #F6F6F6;
     padding: 15px 25px;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     margin: auto 10px;
     letter-spacing: 2px;
 }
 
 .swan-radio-input-checked + swan-label {
-    background-color: #a7f0ba !important;
+    /* background-color: #a7f0ba !important; */
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8dda85 100%);
 }
 
 .mood-selector {
@@ -84,7 +85,7 @@ textarea {
 
 .button-group swan-button {
     display: inline-block;
-    background-color: #f2f4f8;
+    background-color: #f6f6f6;
     border: none !important;
     border-radius: 20px;
     padding: 5px 15px;

@@ -1,4 +1,4 @@
-<view class="wrap" style="background-color: #d3d3d3; padding: 10px; height: 100%;">
+<view class="wrap" style="background-color: #F6F6F6; padding: 10px; height: 100%;">
     <view class="card-area canvas-area {{canvasShow}}" style="height: 85%; width: 100%; margin: auto; transition: all ease 1s">
         <canvas class="myCanvas" canvas-id="mycanvas" disable-scroll="false" bindtouchstart="touchstart"
             bindtouchmove="touchmove" bindtouchend="touchend" bindtouchcancel="touchcancel" bindlongtap="longtap"

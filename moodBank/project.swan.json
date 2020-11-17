@@ -1,60 +1,11 @@
 {
-    "description": "Project configuration file",
-    "packOptions": {
-        "ignore": []
-    },
-    "setting": {
-        "urlCheck": true,
-        "es6": true,
-        "enhance": false,
-        "postcss": true,
-        "preloadBackgroundData": false,
-        "minified": true,
-        "newFeature": false,
-        "coverView": true,
-        "nodeModules": false,
-        "autoAudits": false,
-        "showShadowRootInWxmlPanel": true,
-        "scopeDataCheck": false,
-        "uglifyFileName": false,
-        "checkInvalidKey": true,
-        "checkSiteMap": true,
-        "uploadWithSourceMap": true,
-        "compileHotReLoad": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "useIsolateContext": true,
-        "useCompilerModule": true,
-        "userConfirmedUseCompilerModuleSwitch": false,
-        "packNpmManually": false,
-        "packNpmRelationList": []
-    },
-    "compileType": "miniprogram",
-    "libVersion": "2.13.0",
     "appid": "22874851",
-    "projectname": "心情银行",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "scripts": {},
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
+    "compileType": "miniprogram",
     "condition": {
-        "search": {
-            "list": []
-        },
         "conversation": {
             "list": []
         },
         "game": {
-            "list": []
-        },
-        "plugin": {
             "list": []
         },
         "gamePlugin": {
@@ -62,13 +13,65 @@
         },
         "miniprogram": {
             "list": []
+        },
+        "plugin": {
+            "list": []
+        },
+        "search": {
+            "list": []
         }
     },
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "description": "Project configuration file",
     "host": "baiduboxapp",
+    "libVersion": "2.13.0",
+    "packOptions": {
+        "ignore": []
+    },
+    "preview": {
+        "packageId": 687289
+    },
+    "projectname": "心情银行",
+    "scripts": {},
+    "setting": {
+        "autoAudits": false,
+        "babelSetting": {
+            "disablePlugins": [],
+            "ignore": [],
+            "outputPath": ""
+        },
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "compileHotReLoad": false,
+        "coverView": true,
+        "enhance": false,
+        "es6": true,
+        "minified": true,
+        "newFeature": false,
+        "nodeModules": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "scopeDataCheck": false,
+        "showShadowRootInWxmlPanel": true,
+        "uglifyFileName": false,
+        "uploadWithSourceMap": true,
+        "urlCheck": true,
+        "useApiHook": false,
+        "useCompilerModule": true,
+        "useIsolateContext": true,
+        "useMultiFrameRuntime": false,
+        "userConfirmedUseCompilerModuleSwitch": false
+    },
+    "simulatorPluginLibVersion": {},
+    "simulatorType": "wechat",
     "swan": {
         "baiduboxapp": {
-            "swanJsVersion": "3.200.116",
-            "extensionJsVersion": "1.15.3"
+            "extensionJsVersion": "1.15.3",
+            "swanJsVersion": "3.200.116"
         }
     }
 }

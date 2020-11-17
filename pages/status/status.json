@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+         "custom": "../custom/custom",
+         "smt-feed-item": "@smt-ui/component/src/feed-item",
+         "smt-feed": "@smt-ui/component/src/feed",
+         "smt-spin": "@smt-ui/component/src/spin",
+         "smt-page-status": "@smt-ui/component/src/page-status"
+    }
+}

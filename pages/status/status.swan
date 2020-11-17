@@ -1,0 +1,32 @@
+<smt-feed
+    s-if="!showPageStatus"
+    class="smt-feed pull-down-refresh"
+    pull-to-refresh
+    bind:refresh="onRefresh"
+    bind:scrolltolower="scrollToLower"
+    bind:scroll="scrollHandler"
+    text="{{text}}"
+>
+    <smt-feed-item
+        s-for="item in list"
+        theme="{{item.theme}}"
+        content="{{item.content}}"
+        video="{{item.video}}"
+        status="{{item.status}}"
+        bindfeeditemtap="feedItemTap"
+        data-idx="{{item.content.idx}}"
+        bindtap="toArticle"
+    >
+    </smt-feed-item>
+    <!-- <smt-spin s-if="loaded" status="{{status}}" bind:tap="reload"></smt-spin> -->
+</smt-feed>
+ <smt-page-status
+    s-if="showPageStatus"
+    class="content-loading"
+    icon="{{loadingIcon}}"
+    loading="{{loading}}"
+    showBtn="{{loadingBtn}}"
+    title="{{loadingTitle}}"
+    loadingTitle="正在加载..."
+    bind:smtreloading="reloadPage">
+</smt-page-status>

@@ -1,0 +1,41 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class="container">
+    <view class="search-container">
+        <input class="search-input" bindinput='searchInput' value='{=searchText=}' />
+        <view class="search-icon-container" bindtap='search'>
+            <image class="search-icon" src="../../images/icons/calendar.png" />
+        </view>
+    </view>
+    <view class="sign-container">
+        <text class="sign-guide-text">打卡心情</text>
+        <text class="sign-num-text">{{signedNum}}</text>
+        <text class="sign-num-day-text">天</text>
+        <view class="calendar" bindtap='toCalendarPage'>
+            <text class="calendar-text">打卡日历</text>
+            <image class="calendar-icon" src="../../images/icons/calendar.png" />
+        </view>
+    </view>
+    <view class="task-container" data-type="{{1}}">
+        <text class="task-guide-text">· 心情总览 ·</text>
+        <view class="task-info">
+            <view class="task-info-trisection">
+                <text class="task-info-trisection-top-text">{{newWordsNum}}</text>
+                <text class="task-info-trisection-bottom-text">好心情</text>
+            </view>
+            <view class="task-info-trisection">
+                <text class="task-info-trisection-top-text">{{oldWordsNum}}</text>
+                <text class="task-info-trisection-bottom-text">坏心情</text>
+            </view>
+            <view class="task-info-trisection">
+                <text class="task-info-trisection-top-text">{{unstudyWordsNum}}</text>
+                <text class="task-info-trisection-bottom-text">历史心情</text>
+            </view>
+        </view>
+    </view>
+    <view class="button-container">
+        <view class="start-button"  bindtap="toDictionary">取心情</view>
+        <view s-if="!complete" class="start-button" bindtap="startMain">存心情</view>
+        <view s-else class="start-button">已完成</view>
+    </view>
+
+</view>

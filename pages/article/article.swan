@@ -1,0 +1,36 @@
+<!-- index.swan -->
+<view>
+    <scroll-view scroll-y scroll-top="{{scrollTop}}" s-if="!showPageStatus" class="content-container {{isPhoneX ? 'content-container-ipx' : ''}}" bindtouchmove="scrollPage" bindtouchstart="touchstart" bindscroll="onPageScroll">
+        <view class="content-title">
+            <text selectable>{{title}}</text>
+        </view>
+        <view class="content-desp">
+            <view class="author-detail" bindtap="tapuser" data-user-id="{{authorId}}">
+                <image class="author-avator" mode="widthFix" src="{{avator}}"></image>
+                <view class="author-other">
+                    <view class="author-name">{{author}}</view>
+                    <view class="publish-date">{{date}}</view>
+                </view>
+            </view>
+            <button s-if="showFollowBtn" class="follow-btn" size="mini" type="{{isFollow ? 'default' : 'primary'}}" bindtap="tapfollow" loading="{{btnLoading}}">{{btnLoading ? '' : (isFollow ? '已关注' : '关注')}}</button>
+        </view>
+        <view class="content-detail">
+            <view s-for="item in content" class="detail-{{item.type}}">
+                <quote s-if="item.type == 'quote'" content="{{item.content}}"></quote>
+                <text selectable s-if="item.type == 'p' || item.type == 'title'">{{item.content}}</text>
+                <image s-if="item.type == 'img'" mode="widthFix" src="{{item.content}}"  data-src="{{item.content}}" bindtap="tapimg" bindlongpress="longtapimg"></image>
+            </view>
+        </view>
+        <top class="top-view {{showTopBtn ? 'top-view-show' : 'top-view-hide'}}" bind:top="backToTop"></top>
+    </view>
+    <smt-page-status
+        s-if="showPageStatus"
+        class="content-loading"
+        icon="{{loadingIcon}}"
+        loading="{{loading}}"
+        showBtn="{{loadingBtn}}"
+        title="{{loadingTitle}}"
+        loadingTitle="正在加载..."
+        bind:smtreloading="reloadPage">
+    </smt-page-status>
+</view>

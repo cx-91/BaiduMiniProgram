@@ -1,0 +1,79 @@
+/* 自定义组件的css，在该自定义组件内部生效 (custom.css) */
+.nav-box {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.dark {
+    background-color: #3670c2;
+}
+.white {
+    background-color: #fff;
+}
+.transparent {
+    background-color: transparent;
+}
+.nav-box.dark .page-title-china,
+.nav-box.transparent .page-title-china {
+    color: #fff;
+}
+.nav-box.transparent .page-title-china,
+.nav-box.white .page-title-china {
+    font-size: 35.63rpx;
+    font-weight: 500;
+}
+.nav-box.dark .page-title-english,
+.nav-box.transparent .page-title-english {
+    color: var(--dark-page-status-desc, rgba(255, 255, 255, .6));
+}
+
+.top-title {
+    z-index: 101;
+    display: flex;
+    height: 53px;
+    font-size: .16rem;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+
+.page-title-china {
+    z-index: 101;
+    font-size: .17rem;
+    text-align: center;
+    color: #000;
+    width: 10em; /* 超出十字折行处理 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.page-title-english {
+    z-index: 101;
+    font-size: .13rem;
+    color: #999;
+}
+
+.back-icon-wrap {
+    position: absolute;
+    z-index: 101;
+    left: .25rem;
+    width: .44rem;
+    height: .44rem;
+}
+
+.back-icon {
+    z-index: 101;
+    width: .22rem;
+    height: .22rem;
+    margin-top: .11rem;
+}
+
+.title {
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

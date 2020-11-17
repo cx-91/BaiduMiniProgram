@@ -1,0 +1,12 @@
+/**
+ * @file index.css
+ * @author swan-solution@baidu.com
+ */
+ .smt-feed {
+    display: block;
+    height: 100vh;
+    background: #fff;
+}
+.content-loading {
+    height: 100vh;
+}

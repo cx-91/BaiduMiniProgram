@@ -20,7 +20,7 @@
     </smt-feed-item>
     <!-- <smt-spin s-if="loaded" status="{{status}}" bind:tap="reload"></smt-spin> -->
 </smt-feed>
- <smt-page-status
+ <!-- <smt-page-status
     s-if="showPageStatus"
     class="content-loading"
     icon="{{loadingIcon}}"
@@ -29,4 +29,4 @@
     title="{{loadingTitle}}"
     loadingTitle="正在加载..."
     bind:smtreloading="reloadPage">
-</smt-page-status>
+</smt-page-status> -->

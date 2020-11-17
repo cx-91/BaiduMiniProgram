@@ -33,15 +33,21 @@
         "list": [
             {
                 "pagePath": "pages/home/home",
-                "text": "记录心情"
+                "text": "主页",
+                "iconPath": "images/icons/unselectedicon.png",
+                "selectedIconPath": "images/icons/selectedicon.png"
             },
             {
                 "pagePath": "pages/status/status",
-                "text": "情感解读"
+                "text": "文章",
+                "iconPath": "images/icons/unselectedicon.png",
+                "selectedIconPath": "images/icons/selectedicon.png"
             },
             {
                 "pagePath": "pages/userCenter/userCenter",
-                "text": "用户"
+                "text": "用户",
+                "iconPath": "images/icons/unselectedicon.png",
+                "selectedIconPath": "images/icons/selectedicon.png"
             }
         ]
     },

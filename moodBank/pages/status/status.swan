@@ -18,7 +18,7 @@
         bindtap="toArticle"
     >
     </smt-feed-item>
-    <smt-spin s-if="loaded" status="{{status}}" bind:tap="reload"></smt-spin>
+    <!-- <smt-spin s-if="loaded" status="{{status}}" bind:tap="reload"></smt-spin> -->
 </smt-feed>
  <smt-page-status
     s-if="showPageStatus"

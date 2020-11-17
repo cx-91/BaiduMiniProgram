@@ -5,7 +5,7 @@
 .content-container {
     width: auto;
     color: #000;
-    background-color: #fff;
+    background-color: #F6F6F6;
     padding: 19.93rpx 0 39.86rpx;
 }
 .content-container .content-title,
@@ -38,7 +38,7 @@
     order: 1;
     flex: 1 0 auto;
     display: flex;
-    margin-right: 30.8rpx;
+    margin: 50;
 }
 .author-avator {
     width: 62.81rpx;
@@ -87,7 +87,7 @@ swan-button[loading="true"]:before {
     margin: 26.27rpx 0;
 }
 .detail-img {
-    margin: 44.38rpx 0;
+    margin: 50;
 }
 .detail-quote + :not(.detail-p),
 .detail-img + :not(.detail-p) {

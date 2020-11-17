@@ -1,6 +1,4 @@
 {
-    "navigationBarTitleText": "scroll-View",
-    "navigationStyle": "custom",
     "usingComponents": {
         "custom": "../custom/custom"
     }

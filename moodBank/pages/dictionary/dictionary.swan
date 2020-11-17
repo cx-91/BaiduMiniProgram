@@ -1,5 +1,4 @@
 <!--miniprogram/pages/status/status.wxml-->
-<custom chineseName="可滚动视图区域" engName="scroll-view"></custom>
 <view class="wrap">
     <view class="card-area">
         <view class="top-description">纵向滚动</view>

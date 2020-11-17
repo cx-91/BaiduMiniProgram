@@ -1,6 +1,4 @@
 {
-    "navigationBarTitleText": "心情解读",
-    "navigationStyle": "custom",
     "usingComponents": {
          "custom": "../custom/custom",
          "smt-feed-item": "@smt-ui/component/src/feed-item",

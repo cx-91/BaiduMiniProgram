@@ -4,13 +4,13 @@
   <!-- 用户 openid -->
   <view class="userinfo">
     <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
-    <view>
+    <!-- <view>
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
-    </view>
+    </view> -->
   </view>
 
 
-  <!-- 上传图片 -->
+  上传图片
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
       <text>上传图片</text>

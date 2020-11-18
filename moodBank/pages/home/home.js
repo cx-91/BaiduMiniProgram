@@ -20,55 +20,55 @@ Page({
   onLoad: function (options) {
     that = this;
   },
-  setTaskInfo: function () {
-    var newWordsProgress = swan.getStorageSync('newWordsProgress');
-    var oldWordsProgress = swan.getStorageSync('oldWordsProgress');
-    var newWordsNum = newWordsProgress.totalNum;
-    var oldWordsNum = oldWordsProgress.totalNum;
-    var newWordsUnstudyNum = newWordsProgress.unstudyWords.length + newWordsProgress.studingWords.length;
-    var oldWordsUnstudyNum = oldWordsProgress.studingWords.length + oldWordsProgress.unstudyWords.length;
-    var unstudyWordsNum = newWordsUnstudyNum + oldWordsUnstudyNum;
-    var complete = false;
+//   setTaskInfo: function () {
+//     var newWordsProgress = swan.getStorageSync('newWordsProgress');
+//     var oldWordsProgress = swan.getStorageSync('oldWordsProgress');
+//     var newWordsNum = newWordsProgress.totalNum;
+//     var oldWordsNum = oldWordsProgress.totalNum;
+//     var newWordsUnstudyNum = newWordsProgress.unstudyWords.length + newWordsProgress.studingWords.length;
+//     var oldWordsUnstudyNum = oldWordsProgress.studingWords.length + oldWordsProgress.unstudyWords.length;
+//     var unstudyWordsNum = newWordsUnstudyNum + oldWordsUnstudyNum;
+//     var complete = false;
 
-    if (newWordsProgress.complete && oldWordsProgress.complete) {
-      complete = true;
-    }
+//     if (newWordsProgress.complete && oldWordsProgress.complete) {
+//       complete = true;
+//     }
 
-    that.setData({
-      newWordsNum: newWordsNum,
-      oldWordsNum: oldWordsNum,
-      unstudyWordsNum: unstudyWordsNum,
-      complete: complete
-    });
-  },
-  setSignedNum: function () {
-    var signedNum = 12;
-    that.setData({
-      signedNum: signedNum
-    });
-  },
-  setBookInfo: function () {
-    var bookInfo = {
-      totalNum: 2340,
-      studiedNum: 242,
-      name: "六级考纲词汇(2019版)",
-      percentage: 12
-    };
-    that.setData({
-      bookInfo: bookInfo
-    });
-  },
-  searchInput: function (e) {
-    this.setData({
-      searchText: e.detail.value
-    });
-  },
-  search: function () {
-    console.log(this.data.searchText);
-    this.setData({
-      searchText: ""
-    });
-  },
+//     that.setData({
+//       newWordsNum: newWordsNum,
+//       oldWordsNum: oldWordsNum,
+//       unstudyWordsNum: unstudyWordsNum,
+//       complete: complete
+//     });
+//   },
+//   setSignedNum: function () {
+//     var signedNum = 12;
+//     that.setData({
+//       signedNum: signedNum
+//     });
+//   },
+//   setBookInfo: function () {
+//     var bookInfo = {
+//       totalNum: 2340,
+//       studiedNum: 242,
+//       name: "六级考纲词汇(2019版)",
+//       percentage: 12
+//     };
+//     that.setData({
+//       bookInfo: bookInfo
+//     });
+//   },
+//   searchInput: function (e) {
+//     this.setData({
+//       searchText: e.detail.value
+//     });
+//   },
+//   search: function () {
+//     console.log(this.data.searchText);
+//     this.setData({
+//       searchText: ""
+//     });
+//   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -79,9 +79,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setTaskInfo();
-    this.setSignedNum();
-    this.setBookInfo();
+    // this.setTaskInfo();
+    // this.setSignedNum();
+    // this.setBookInfo();
   },
 
   /**

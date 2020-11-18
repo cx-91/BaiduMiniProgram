@@ -7,7 +7,7 @@
         </view>
         <!-- <text class="userinfo-nickname-text">{{userInfo.nickName}}</text> -->
         <open-data type="userNickName" class="userinfo-nickname-text"></open-data>
-        <open-data type="userCity" class="userinfo-userid-text"></open-data>
+        <!-- <open-data type="userCity" class="userinfo-userid-text"></open-data> -->
     </view>
     <!-- <view class="trisaction-block">
         <view class="trisaction" bindtap="toTaskPage">
@@ -30,7 +30,14 @@
         </view>
     </view> -->
     <view class="options-block">
-        <view class="option">
+    <view class="option">
+            <view class="option-icon-container">
+                <image class="option-icon" src="../../images/icons/email.png" />
+            </view>
+            <text class="option-text">版本编号：1.1.0</text>
+
+        </view>
+        <!-- <view class="option">
             <view class="option-icon-container">
                 <image class="option-icon" src="../../images/icons/email.png" />
             </view>
@@ -83,6 +90,6 @@
             <view class="option-icon-right-container">
                 <image class="option-icon-right" src="../../images/icons/right.png" />
             </view>
-        </view>
+        </view> -->
     </view>
 </view>

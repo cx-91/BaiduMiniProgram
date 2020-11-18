@@ -70,8 +70,8 @@
     "simulatorType": "wechat",
     "swan": {
         "baiduboxapp": {
-            "extensionJsVersion": "1.15.3",
-            "swanJsVersion": "3.200.116"
+            "swanJsVersion": "3.200.116",
+            "extensionJsVersion": "1.15.3"
         }
     }
 }

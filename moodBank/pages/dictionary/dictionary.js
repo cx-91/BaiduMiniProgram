@@ -1,6 +1,6 @@
 // miniprogram/pages/dictionary/dictionary.js
 
-let app = getApp();
+// let app = getApp();
 const order = ['one', 'two', 'three'];
 
 /* eslint-disable babel/new-cap */
@@ -25,14 +25,14 @@ Page({
     },
     onShow() {
         // 打点操作
-        const openParams = app.globalData.openParams;
-        if (openParams) {
-            swan.reportAnalytics('pageshow', {
-                fr: openParams,
-                type: 'component',
-                name: 'scroll-view'
-            });
-        }
+        // const openParams = app.globalData.openParams;
+        // if (openParams) {
+        //     swan.reportAnalytics('pageshow', {
+        //         fr: openParams,
+        //         type: 'component',
+        //         name: 'scroll-view'
+        //     });
+        // }
     },
     onHide() {
         app.globalData.openParams = '';

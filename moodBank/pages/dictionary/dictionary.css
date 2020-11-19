@@ -1,17 +1,21 @@
 /* miniprogram/pages/status/status.wxss */
 
 .scroll-view {
-    height: 4.8rem;
+    height: 5.6rem;
     white-space: nowrap;
 }
 
 .color-a,
 .color-b,
 .color-c {
-    line-height: 1.66rem;
-    text-align: center;
+    line-height: .3rem;
+    height: 5.6rem;
+    text-align: left;
     font-size: .16rem;
     color: #fff;
+
+    display: flex;
+    flex-direction: row;
 }
 
 .color-a {
@@ -25,10 +29,10 @@
 }
 
 .row-view {
-    display: inline-block !important;
+    /* display: inline-block !important;
     width: 100%;
-    height: 1.66rem;
-    line-height: 1.66rem;
+    height: 5.8rem;
+    line-height: 5.8rem; */
 }
 
 .page-section-btns {
@@ -61,7 +65,7 @@
 
 
 .horizontal-rolling {
-    height: 2.5rem;
+    height: 4.5rem;
 }
 
 .arrange {

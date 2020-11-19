@@ -1,5 +1,4 @@
 {
-    "navigationBarTitleText": "页面标题",
     "usingComponents": {
         "quote": "../../components_article/quote/quote",
         "top": "../../components_article/top/top",

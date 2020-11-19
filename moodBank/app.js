@@ -11,18 +11,19 @@ App({
     //   });
     // }
 
-    // this.initTask();
-    // this.globalData = {
-    //     //mo ban li fu zhi de docWeb, ke yi bei ti huan
-    //     openParams: 'docWeb'
-    // };
+//     this.initTask();
+//     this.globalData = {
+//         //mo ban li fu zhi de docWeb, ke yi bei ti huan
+//         openParams: 'docWeb'
+//     };
   },
 //   initTask: function () {
-//     var lastLoginDate; // if(lastLoginDate = wx.getStorageSync('lastLoginDate')){
-//     //   if(this.isToday(lastLoginDate)){
-//     //     return;
-//     //   }
-//     // }
+//     var lastLoginDate;
+//     if(lastLoginDate = wx.getStorageSync('lastLoginDate')){
+//       if(this.isToday(lastLoginDate)){
+//         return;
+//       }
+//     }
 
 //     this.setNewDate();
 //     this.setNewTask();
@@ -50,7 +51,6 @@ App({
 //     swan.setStorageSync('lastLoginDate', date);
 //   },
 //   setNewTask: function () {
-//     console.log("here");
 //     swan.cloud.callFunction({
 //       name: 'getDailyTask',
 //       data: {},

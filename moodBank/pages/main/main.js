@@ -4,8 +4,11 @@
  */
 const app = getApp()
 
+var uerData = require("../../utils/data.js");
+
 Page({
     data: {
+        userInfo: uerData,
         buttonGroupDisplay: 'none',
         cardDisplay: 'inline-block',
         screenWidth: 300,
@@ -204,15 +207,19 @@ Page({
         swan.getUserInfo({
             success: res => {
                 const userInfo = res.userInfo;
+
+
                 const obj = {
                     userInput: e.detail.value,
                     userInfo: userInfo,
                     date: new Date().toUTCString()
                 }
+
                 swan.showModal({
                     title: '存心情成功',
                     content: JSON.stringify(obj)
                 })
+
             },
             fail: err => {
                 const obj = {
@@ -226,5 +233,9 @@ Page({
                 })
             }
         })
+    },
+    getUserInfo(e){
+        var userInfo = JSON.stringify(e.detail.userInfo);
+        console.log(userInfo);
     }
 });

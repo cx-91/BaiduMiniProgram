@@ -73,5 +73,10 @@ Page({
     swan.navigateBack({
       delta: 0
     });
+  },
+  getUserInfo: function(e){
+      var userInfo = JSON.stringify(e.detail.userInfo);
+      console.log(userInfo);
   }
+  ,
 });

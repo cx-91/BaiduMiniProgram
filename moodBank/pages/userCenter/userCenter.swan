@@ -7,6 +7,9 @@
         </view>
         <!-- <text class="userinfo-nickname-text">{{userInfo.nickName}}</text> -->
         <open-data type="userNickName" class="userinfo-nickname-text"></open-data>
+
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
+
         <!-- <open-data type="userCity" class="userinfo-userid-text"></open-data> -->
     </view>
     <!-- <view class="trisaction-block">

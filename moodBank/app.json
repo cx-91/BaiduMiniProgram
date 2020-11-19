@@ -1,7 +1,7 @@
 {
     "pages": [
+
         "pages/home/home",
-        "pages/plan/plan",
         "pages/task/task",
         "pages/calendar/calendar",
         "pages/main/main",
@@ -11,7 +11,6 @@
         "pages/wordInfo/wordInfo",
         "pages/remind/remind",
         "pages/userCenter/userCenter",
-        "pages/index/index",
         "pages/userConsole/userConsole",
         "pages/storageConsole/storageConsole",
         "pages/databaseGuide/databaseGuide",

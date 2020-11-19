@@ -28,7 +28,7 @@
             </view>
             <view class="task-info-trisection">
                 <text class="task-info-trisection-top-text">{{unstudyWordsNum}}</text>
-                <text class="task-info-trisection-bottom-text">历史心情</text>
+                <text class="task-info-trisection-bottom-text">一般心情</text>
             </view>
         </view>
     </view>

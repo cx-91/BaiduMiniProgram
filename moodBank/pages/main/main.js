@@ -19,6 +19,7 @@ Page({
         canvasShow: "hide",
         textShow: "hide",
         buttonGroupShow: "hide",
+        buttonGroupHeight: '0',
         cardShow: "show",
     },
     onLoad() {
@@ -102,11 +103,11 @@ Page({
         const ctx = this.canvasContext;
         ctx.beginPath();
         ctx.arc(0.5*(this.data.screenWidth-20), 0.3*this.data.screenHeight, 50, 0, 2 * Math.PI);
-        if (mood == "happy") {
+        if (mood == "开心") {
             ctx.setFillStyle('#ff9a55');
-        } else if (mood == "sad") {
+        } else if (mood == "不开心") {
             ctx.setFillStyle('#6e7c5e');
-        } else if (mood == "calm") {
+        } else if (mood == "一般") {
             ctx.setFillStyle('#c9aa88');
         }
         ctx.fill();
@@ -186,6 +187,7 @@ Page({
                     that.setData({
                         textShow: 'show',
                         buttonGroupShow: 'show',
+                        buttonGroupHeight: '15%',
                         canvasShow: 'show',
                         cardShow: 'hide'
                     })
@@ -197,7 +199,8 @@ Page({
         ctx.clearRect(0, 0, this.data.screenWidth, this.data.screenHeight);
         ctx.draw();
         this.setData({
-            buttonGroupDisplay: 'none',
+            buttonGroupShow: 'hide',
+            buttonGroupHeight: '0',
             moodShow: 'show',
             cardShow: 'show',
             canvasShow: 'hide'

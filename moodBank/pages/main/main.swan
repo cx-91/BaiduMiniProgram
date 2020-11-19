@@ -16,13 +16,13 @@
                 </view>
                 <view class="mood-selector">
                     <radio-group name="mood" bindchange="moodChange">
-                        <radio value="sad">
+                        <radio value="不开心">
                             <label>不开心</label>
                         </radio>
-                        <radio value="calm">
-                            <label>平静</label>
+                        <radio value="一般">
+                            <label>一般</label>
                         </radio>
-                        <radio value="happy">
+                        <radio value="开心">
                             <label>开心</label>
                         </radio>
                     </radio-group>
@@ -37,13 +37,13 @@
                 </view>
                 <view class="mood-selector">
                     <radio-group name="impact" bindchange="impactChange">
-                    <radio value="alittle">
+                    <radio value="较少">
                             <label>较少</label>
                         </radio>
-                        <radio value="no">
+                        <radio value="没有">
                             <label>没有</label>
                         </radio>
-                        <radio value="alot">
+                        <radio value="较多">
                             <label>较多</label>
                         </radio>
                     </radio-group>
@@ -57,13 +57,13 @@
                 </view>
                 <view class="mood-selector">
                     <radio-group name="change" bindchange="changeChange">
-                        <radio value="no">
+                        <radio value="不想">
                             <label>不想</label>
                         </radio>
-                        <radio value="dontknow">
+                        <radio value="不知道">
                             <label>不知道</label>
                         </radio>
-                        <radio value="yes">
+                        <radio value="我想">
                             <label>我想</label>
                         </radio>
                     </radio-group>

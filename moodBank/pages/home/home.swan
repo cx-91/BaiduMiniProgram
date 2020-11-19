@@ -7,8 +7,8 @@
         </view>
     </view>
     <view class="sign-container">
-        <text class="sign-guide-text">打卡心情</text>
-        <text class="sign-num-text">{{signedNum}}</text>
+        <text class="sign-guide-text">心情打卡</text>
+        <text class="sign-num-text">0{{signedNum}}</text>
         <text class="sign-num-day-text">天</text>
         <view class="calendar" bindtap='toCalendarPage'>
             <text class="calendar-text">打卡日历</text>
@@ -19,15 +19,15 @@
         <text class="task-guide-text">· 心情总览 ·</text>
         <view class="task-info">
             <view class="task-info-trisection">
-                <text class="task-info-trisection-top-text">{{newWordsNum}}</text>
+                <text class="task-info-trisection-top-text">0{{newWordsNum}}</text>
                 <text class="task-info-trisection-bottom-text">好心情</text>
             </view>
             <view class="task-info-trisection">
-                <text class="task-info-trisection-top-text">{{oldWordsNum}}</text>
+                <text class="task-info-trisection-top-text">0{{oldWordsNum}}</text>
                 <text class="task-info-trisection-bottom-text">坏心情</text>
             </view>
             <view class="task-info-trisection">
-                <text class="task-info-trisection-top-text">{{unstudyWordsNum}}</text>
+                <text class="task-info-trisection-top-text">0{{unstudyWordsNum}}</text>
                 <text class="task-info-trisection-bottom-text">一般心情</text>
             </view>
         </view>

@@ -1,23 +1,17 @@
 {
     "pages": [
-
         "pages/home/home",
-        "pages/task/task",
         "pages/calendar/calendar",
         "pages/main/main",
         "pages/status/status",
         "pages/article/article",
         "pages/dictionary/dictionary",
-        "pages/wordInfo/wordInfo",
-        "pages/remind/remind",
         "pages/userCenter/userCenter",
         "pages/userConsole/userConsole",
-        "pages/storageConsole/storageConsole",
         "pages/databaseGuide/databaseGuide",
         "pages/addFunction/addFunction",
         "pages/deployFunctions/deployFunctions",
         "pages/chooseLib/chooseLib",
-        "pages/library/library",
         "pages/cloud/cloud"
     ],
     "window": {

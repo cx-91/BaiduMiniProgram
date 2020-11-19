@@ -78,5 +78,4 @@ Page({
       var userInfo = JSON.stringify(e.detail.userInfo);
       console.log(userInfo);
   }
-  ,
 });

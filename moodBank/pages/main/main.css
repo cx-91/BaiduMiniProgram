@@ -42,11 +42,11 @@ swan-radio-group {
 .swan-radio-wrapper swan-label {
     display: inline-block;
     background-color: #F6F6F6;
-    padding: 15px 25px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
-    margin: auto 10px;
-    letter-spacing: 2px;
+    margin: auto 4px;
+    letter-spacing: 1px;
 }
 
 .swan-radio-input-checked + swan-label {

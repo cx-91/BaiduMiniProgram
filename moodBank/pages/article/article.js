@@ -48,14 +48,14 @@ Page({
         };
     },
     onLoad(options) {
-        console.log(options);
+        //console.log(options);
         idx = options.idx;
-        console.log("input: ", idx);
+        //console.log("input: ", idx);
 
         swan.request.mock = function (param) {
             console.log("on success");
-            console.log(JSON.stringify(param));
-            console.log("---------------------------------------");
+            //console.log(JSON.stringify(param));
+            //console.log("---------------------------------------");
             //console.log(JSON.stringify(param['res']['data'][1]));
             setTimeout(() => {
                 if (param.res && param.success) {
@@ -68,7 +68,7 @@ Page({
                 } else if (param.fail) {
                     param.fail({errMsg: '未知错误'});
                 }
-                console.log("on completed");
+                //console.log("on completed");
                 param.complete && param.complete();
                 console.log("completed");
             }, 300);
@@ -76,20 +76,20 @@ Page({
         swan.setStorageSync('@content-detail:userId', 'xxx');
         checkIsiPhoneX(this);
 
-        console.log("reach 1: ",JSON.stringify(options.articleId));
+        //console.log("reach 1: ",JSON.stringify(options.articleId));
 
 
         this.setData({
             articleId: options.articleId
         });
 
-        console.log("reach 20: ",JSON.stringify(options.articleId));
+        //console.log("reach 20: ",JSON.stringify(options.articleId));
         //console.log("reach 21: ",JSON.parse(options.articleId));
-        console.log("reach 22: ",JSON.stringify(options.idx));
-        console.log("reach 23: ",JSON.parse(options.idx));
+        //console.log("reach 22: ",JSON.stringify(options.idx));
+        //console.log("reach 23: ",JSON.parse(options.idx));
 
         this.getArticleDetail(options.articleId, () => {
-            console.log("getArticleDetail");
+            //console.log("getArticleDetail");
             let userId = swan.getStorageSync('@content-detail:userId');
 
             if (userId !== '' && this.data.authorId !== userId) {
@@ -97,7 +97,7 @@ Page({
                     showFollowBtn: true
                 });
             }
-            console.log("reach 95: ");
+            //console.log("reach 95: ");
             this.setData('imgList', this.data.content.reduce((result, item) => {
                 if (item.type === 'img') {
                     result.push(item.content);
@@ -124,7 +124,7 @@ Page({
         });
     },
     reloadPage() {
-        console.log("reloading");
+        //console.log("reloading");
         this.setData({
             loading: true,
             showPageStatus: true
@@ -133,7 +133,7 @@ Page({
     },
     getArticleDetail(articleId, cb) {
         // TODO: 获取内容详情所需要的数据，请修改为相关的请求地址参数
-        console.log("getArticleDetail call params");
+        //console.log("getArticleDetail call params");
         let params = {
             url: '',
             method: 'GET',
@@ -177,7 +177,7 @@ Page({
         swan.request.mock ? swan.request.mock(params) : swan.request(params);
     },
     getDesp() {
-        console.log("getDesp");
+        //console.log("getDesp");
         return this.data.content.reduce((result, item) => {
             if (item.type === 'p') {
                 result += item.content;
@@ -186,19 +186,19 @@ Page({
         }, '').substr(0, 20) + '...';
     },
     showTopBtn() {
-        console.log("showTopBtn");
+        //console.log("showTopBtn");
         this.setData({
             showTopBtn: true
         });
     },
     hideTopBtn() {
-        console.log("hideTopBtn");
+        //console.log("hideTopBtn");
         this.setData({
             showTopBtn: false
         });
     },
     tapuser({currentTarget}) {
-        console.log("tapuser");
+        //console.log("tapuser");
         let userId = currentTarget.dataset.userId;
         swan.reportAnalytics('tapuser', {
             articleId: this.data.articleId,
@@ -210,7 +210,7 @@ Page({
         // });
     },
     tapfollow(e) {
-        console.log("tapfollow");
+        //console.log("tapfollow");
         let isFollow = this.data.isFollow;
         swan.reportAnalytics('tapfollow', {
             articleId: this.data.articleId,

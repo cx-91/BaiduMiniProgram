@@ -5,13 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    searchText: "",
-    signedNum: 0,
-    newWordsNum: 0,
-    oldWordsNum: 0,
-    unstudyWordsNum: 0,
-    bookInfo: {},
-    progressType: 0
+    // searchText: "",
+    // signedNum: 0,
+    // newWordsNum: 0,
+    // oldWordsNum: 0,
+    // unstudyWordsNum: 0,
+    // bookInfo: {},
+    // progressType: 0
   },
 
   /**

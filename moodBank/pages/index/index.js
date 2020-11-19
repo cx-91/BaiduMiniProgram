@@ -6,36 +6,37 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    showAuth: true
   },
 
   onReady() {},
 
   onLoad: function () {
-    if (!swan.cloud) {
-      swan.redirectTo({
-        url: '../chooseLib/chooseLib'
-      });
-      return;
-    } // 获取用户信息
+    // if (!swan.cloud) {
+    //   swan.redirectTo({
+    //     url: '../chooseLib/chooseLib'
+    //   });
+    //   return;
+    // } // 获取用户信息
 
 
-    swan.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          swan.getUserInfo({
-            success: res => {
-              console.log(res.userInfo);
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              });
-            }
-          });
-        }
-      }
-    });
+    // swan.getSetting({
+    //   success: res => {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+    //       swan.getUserInfo({
+    //         success: res => {
+    //           console.log(res.userInfo);
+    //           this.setData({
+    //             avatarUrl: res.userInfo.avatarUrl,
+    //             userInfo: res.userInfo
+    //           });
+    //         }
+    //       });
+    //     }
+    //   }
+    // });
   },
   onGetUserInfo: function (e) {
     if (!this.logged && e.detail.userInfo) {
@@ -108,5 +109,14 @@ Page({
         console.error(e);
       }
     });
-  }
+  },
+  authentication: function(e){
+    var info = JSON.stringify(e.detail.userInfo);
+    console.log(info);
+
+    this.setData({
+        userInfo : e.detail.info,
+        showAuth:false
+    })
+}
 });

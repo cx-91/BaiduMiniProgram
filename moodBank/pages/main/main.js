@@ -185,11 +185,11 @@ Page({
                 })
                 .exec(function(rect){
                     that.setData({
-                        textShow: 'show',
+                        textShow: 'hide',
                         buttonGroupShow: 'show',
                         buttonGroupHeight: '15%',
                         canvasShow: 'show',
-                        cardShow: 'hide'
+                        cardShow: 'cardhide'
                     })
                 })
         }, 0);
